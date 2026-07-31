@@ -1,0 +1,4 @@
+interface:
+  display_name: "Conformité juridique des sites"
+  short_description: "Mentions, confidentialité et cookies multi-pays"
+  default_prompt: "Utilise $website-legal-compliance pour auditer ce site et préparer ses documents juridiques selon les juridictions applicables."

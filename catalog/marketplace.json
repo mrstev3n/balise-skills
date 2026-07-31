@@ -1,0 +1,130 @@
+{
+  "$schema": "./schemas/marketplace.schema.json",
+  "schemaVersion": "1.0",
+  "marketplace": {
+    "id": "skill-market",
+    "name": "Skill Market",
+    "description": "A multi-domain catalogue of portable Agent Skills.",
+    "release": "0.1.0"
+  },
+  "categories": [
+    {
+      "id": "legal",
+      "label": "Legal",
+      "description": "Legal research, analysis, drafting, and compliance workflows.",
+      "status": "active"
+    },
+    {
+      "id": "design",
+      "label": "Design",
+      "description": "Design research, production, and review workflows.",
+      "status": "planned"
+    },
+    {
+      "id": "typography",
+      "label": "Typography",
+      "description": "Typography selection, composition, and quality workflows.",
+      "status": "planned"
+    },
+    {
+      "id": "security",
+      "label": "Security",
+      "description": "Security assessment, hardening, and validation workflows.",
+      "status": "planned"
+    }
+  ],
+  "tags": [
+    { "id": "business-law", "label": "Business law" },
+    { "id": "cookies", "label": "Cookies" },
+    { "id": "ecommerce", "label": "E-commerce" },
+    { "id": "francophone-africa", "label": "Francophone Africa" },
+    { "id": "jurisdiction-aware", "label": "Jurisdiction-aware" },
+    { "id": "legal-research", "label": "Legal research" },
+    { "id": "multi-jurisdiction", "label": "Multi-jurisdiction" },
+    { "id": "ohada", "label": "OHADA" },
+    { "id": "privacy", "label": "Privacy" }
+  ],
+  "skills": [
+    {
+      "id": "ohada-legal-practice",
+      "version": "0.1.0",
+      "path": "skills/ohada-legal-practice",
+      "summary": "Research and drafting workflows for OHADA business law and the national law of fifteen francophone member states.",
+      "category": "legal",
+      "tags": [
+        "business-law",
+        "francophone-africa",
+        "jurisdiction-aware",
+        "legal-research",
+        "ohada"
+      ],
+      "license": "Apache-2.0",
+      "compatibility": {
+        "format": "agent-skills",
+        "adapters": ["codex-openai"],
+        "installTested": [
+          {
+            "harness": "claude-code",
+            "method": "skills@1.5.9 copy",
+            "date": "2026-07-31"
+          },
+          {
+            "harness": "codex",
+            "method": "skills@1.5.9 copy",
+            "date": "2026-07-31"
+          },
+          {
+            "harness": "cursor",
+            "method": "skills@1.5.9 copy",
+            "date": "2026-07-31"
+          }
+        ],
+        "runtimeTested": ["codex-cli@0.145.0 (2026-07-31)"]
+      }
+    },
+    {
+      "id": "website-legal-compliance",
+      "version": "0.1.0",
+      "path": "skills/website-legal-compliance",
+      "summary": "Audit and drafting workflows for legal notices, privacy, cookies, and e-commerce across multiple jurisdictions.",
+      "category": "legal",
+      "tags": [
+        "cookies",
+        "ecommerce",
+        "francophone-africa",
+        "jurisdiction-aware",
+        "multi-jurisdiction",
+        "privacy"
+      ],
+      "license": "Apache-2.0",
+      "compatibility": {
+        "format": "agent-skills",
+        "adapters": ["codex-openai"],
+        "installTested": [
+          {
+            "harness": "claude-code",
+            "method": "skills@1.5.9 copy",
+            "date": "2026-07-31"
+          },
+          {
+            "harness": "codex",
+            "method": "skills@1.5.9 copy",
+            "date": "2026-07-31"
+          },
+          {
+            "harness": "cursor",
+            "method": "skills@1.5.9 copy",
+            "date": "2026-07-31"
+          }
+        ],
+        "runtimeTested": ["codex-cli@0.145.0 (2026-07-31)"]
+      }
+    }
+  ],
+  "collections": [
+    {
+      "id": "legal",
+      "manifest": "collections/legal.json"
+    }
+  ]
+}

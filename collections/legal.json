@@ -1,0 +1,12 @@
+{
+  "$schema": "../catalog/schemas/collection.schema.json",
+  "schemaVersion": "1.0",
+  "id": "legal",
+  "name": "Legal",
+  "description": "Jurisdiction-aware legal research and website compliance workflows.",
+  "version": "0.1.0",
+  "skills": [
+    "ohada-legal-practice",
+    "website-legal-compliance"
+  ]
+}
