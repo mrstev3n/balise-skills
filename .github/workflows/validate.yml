@@ -1,0 +1,37 @@
+name: Validate catalogue
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate repository invariants
+        run: npm run validate
+      - name: Validate JSON Schemas
+        run: |
+          pipx run --spec 'check-jsonschema==0.37.4' check-jsonschema --schemafile catalog/schemas/marketplace.schema.json catalog/marketplace.json
+          pipx run --spec 'check-jsonschema==0.37.4' check-jsonschema --schemafile catalog/schemas/collection.schema.json collections/legal.json
+      - name: Validate Agent Skills
+        run: |
+          pipx run --spec 'git+https://github.com/agentskills/agentskills.git@38a2ff82958afee88dadf4831509e6f7e9d8ef4e#subdirectory=skills-ref' skills-ref validate skills/ohada-legal-practice
+          pipx run --spec 'git+https://github.com/agentskills/agentskills.git@38a2ff82958afee88dadf4831509e6f7e9d8ef4e#subdirectory=skills-ref' skills-ref validate skills/website-legal-compliance
+      - name: Smoke-test multi-harness installation
+        run: |
+          mkdir -p /tmp/skill-market-smoke
+          cd /tmp/skill-market-smoke
+          npx --yes skills@1.5.9 add "$GITHUB_WORKSPACE" --agent claude-code codex cursor --skill ohada-legal-practice website-legal-compliance --copy --yes
+          diff -qr "$GITHUB_WORKSPACE/skills/ohada-legal-practice" .agents/skills/ohada-legal-practice
+          diff -qr "$GITHUB_WORKSPACE/skills/website-legal-compliance" .agents/skills/website-legal-compliance
+          diff -qr "$GITHUB_WORKSPACE/skills/ohada-legal-practice" .claude/skills/ohada-legal-practice
+          diff -qr "$GITHUB_WORKSPACE/skills/website-legal-compliance" .claude/skills/website-legal-compliance
