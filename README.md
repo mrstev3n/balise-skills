@@ -2,15 +2,15 @@
 
 # Skill Market
 
-Portable skills for Claude Code, Codex, Cursor, and other Agent Skills-compatible tools.
+Des skills portables pour Claude Code, Codex, Cursor et les autres outils compatibles avec le standard Agent Skills.
 
-Browse individual skills or install a curated collection. Every skill uses [`SKILL.md`](https://agentskills.io/specification) as its canonical format, with optional harness-specific metadata kept in separate adapters.
+Installez un skill précis ou une collection prête à l’emploi. Chaque skill utilise [`SKILL.md`](https://agentskills.io/specification) comme format canonique. Les métadonnées propres à chaque outil restent isolées dans des adaptateurs.
 
-## Available skills
+## Skills disponibles
 
 ### `ohada-legal-practice`
 
-Research and drafting workflows for OHADA business law and the national law of 15 francophone member states.
+Recherche et rédaction en droit des affaires OHADA et dans les droits nationaux de 15 États membres francophones.
 
 ```bash
 npx skills add mrstev3n/Skill-Market --skill ohada-legal-practice
@@ -18,15 +18,15 @@ npx skills add mrstev3n/Skill-Market --skill ohada-legal-practice
 
 ### `website-legal-compliance`
 
-Audit and drafting workflows for legal notices, privacy, cookies, and e-commerce across multiple jurisdictions.
+Audit et rédaction de mentions légales, politiques de confidentialité, règles relatives aux cookies et documents de commerce électronique pour plusieurs juridictions.
 
 ```bash
 npx skills add mrstev3n/Skill-Market --skill website-legal-compliance
 ```
 
-## Install the Legal collection
+## Installer la collection `legal`
 
-The `legal` collection installs both skills:
+La collection `legal` installe les deux skills :
 
 ```bash
 npx skills add mrstev3n/Skill-Market \
@@ -34,7 +34,7 @@ npx skills add mrstev3n/Skill-Market \
   --skill website-legal-compliance
 ```
 
-List all available skills before installing:
+Pour afficher tous les skills disponibles avant l’installation :
 
 ```bash
 npx skills add mrstev3n/Skill-Market --list
@@ -42,24 +42,24 @@ npx skills add mrstev3n/Skill-Market --list
 
 ## Catalogue
 
-Skill Market supports three discovery layers:
+Skill Market propose trois niveaux de découverte :
 
-- **Categories** group skills by primary field.
-- **Tags** connect skills across fields and use cases.
-- **Collections** bundle several skills into one installable set.
+- Les **catégories** regroupent les skills par domaine principal.
+- Les **tags** relient les skills selon leurs sujets et leurs usages.
+- Les **collections** réunissent plusieurs skills dans un ensemble installable.
 
-Legal is the first collection in a marketplace designed to grow across multiple fields.
+La collection `legal` inaugure un catalogue conçu pour couvrir plusieurs domaines.
 
-Machine-readable metadata lives in [`catalog/marketplace.json`](catalog/marketplace.json). See the [metadata model](docs/metadata.md) and [compatibility policy](docs/compatibility.md) for details.
+Les métadonnées exploitables par des outils se trouvent dans [`catalog/marketplace.json`](catalog/marketplace.json). Consultez le [modèle de métadonnées](docs/metadata.md) et la [politique de compatibilité](docs/compatibility.md) pour en savoir plus.
 
-## Validate
+## Valider le catalogue
 
 ```bash
 npm run validate
 ```
 
-The validation workflow checks catalogue schemas, skill structure, links, adapters, and collection integrity.
+Cette commande vérifie les schémas du catalogue, la structure des skills, les liens, les adaptateurs et l’intégrité des collections.
 
 ## Licence
 
-Apache License 2.0. See [`LICENSE`](LICENSE).
+Licence Apache 2.0. Consultez le fichier [`LICENSE`](LICENSE).
