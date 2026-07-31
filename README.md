@@ -10,7 +10,9 @@ Installez un skill précis ou une collection prête à l’emploi. Chaque skill 
 
 ### `ohada-legal-practice`
 
-Recherche et rédaction en droit des affaires OHADA et dans les droits nationaux de 15 États membres francophones.
+Un cadre de travail pour aider une IA à rechercher, analyser et rédiger en droit des affaires OHADA, sans confondre les Actes uniformes avec les règles nationales applicables.
+
+Le skill couvre 15 États membres francophones : Bénin, Burkina Faso, Cameroun, République centrafricaine, Tchad, Comores, Congo, Côte d’Ivoire, République démocratique du Congo (RDC), Gabon, Guinée, Mali, Niger, Sénégal et Togo. Il oriente notamment les recherches relatives aux sociétés commerciales, au RCCM, aux sûretés, au recouvrement et aux procédures collectives.
 
 ```bash
 npx skills add mrstev3n/Skill-Market --skill ohada-legal-practice
@@ -18,7 +20,9 @@ npx skills add mrstev3n/Skill-Market --skill ohada-legal-practice
 
 ### `website-legal-compliance`
 
-Audit et rédaction de mentions légales, politiques de confidentialité, règles relatives aux cookies et documents de commerce électronique pour plusieurs juridictions.
+Le RGPD est souvent le premier réflexe en matière de conformité numérique. Pourtant, un site destiné à un public francophone peut aussi relever de lois nationales sur les données personnelles, les cookies, les transactions électroniques ou la protection des consommateurs.
+
+Ce skill aide une IA à déterminer les juridictions applicables avant de rédiger des mentions légales, une politique de confidentialité, une politique de cookies ou des documents de commerce électronique. Il intègre les cadres du Bénin, du Burkina Faso, de la Côte d’Ivoire, de la Guinée, du Mali, du Niger, du Sénégal, du Togo, du Cameroun, du Congo, du Gabon, de la République centrafricaine, de la RDC, du Tchad et des Comores, ainsi que le RGPD lorsqu’il est effectivement applicable.
 
 ```bash
 npx skills add mrstev3n/Skill-Market --skill website-legal-compliance
