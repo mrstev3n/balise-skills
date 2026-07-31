@@ -1,6 +1,6 @@
 ---
 name: website-legal-compliance
-description: "Auditer et préparer les informations juridiques d'un site, d'une application ou d'un service numérique multi-juridiction : mentions légales, politique de confidentialité, information au point de collecte, politique et interface cookies, informations e-commerce et plan d'implémentation. Utiliser pour créer, réviser ou contrôler ces pages et interfaces au Bénin, Burkina Faso, Cameroun, RCA, Tchad, Comores, Congo, Côte d'Ivoire, Gabon, Guinée, Mali, Niger, RDC, Sénégal, Togo, Ghana, France/UE ou Canada/Québec, notamment lorsqu'il faut déterminer si le RGPD ou plusieurs lois nationales s'appliquent."
+description: "Auditer et préparer les informations juridiques d'un site, d'une application ou d'un service numérique multi-juridiction : mentions légales, politique de confidentialité, information au point de collecte, politique et interface cookies, informations e-commerce et plan d'implémentation. Utiliser en priorité pour les juridictions d'Afrique francophone — Bénin, Burkina Faso, Cameroun, RCA, Tchad, Comores, Congo, Côte d'Ivoire, Gabon, Guinée, Mali, Niger, RDC, Sénégal et Togo — et pour leurs superpositions avec le Ghana, la France/UE (RGPD) ou le Canada/Québec."
 ---
 
 # Conformité juridique des sites
@@ -24,7 +24,7 @@ Travailler comme assistant de recherche, d'audit et de rédaction. Partir du pro
 - Lire [privacy-notice.md](references/privacy-notice.md) avant de rédiger ou réviser une politique de confidentialité.
 - Lire [cookies-and-interface.md](references/cookies-and-interface.md) pour les traceurs, le bandeau et la gestion des préférences.
 - Lire [legal-notices-ecommerce.md](references/legal-notices-ecommerce.md) pour l'identification de l'éditeur et les informations e-commerce.
-- Lire le profil approprié : [jurisdictions-west-africa.md](references/jurisdictions-west-africa.md), [jurisdictions-central-africa.md](references/jurisdictions-central-africa.md), [jurisdictions-comoros.md](references/jurisdictions-comoros.md) ou [international-overlays.md](references/international-overlays.md).
+- Lire le profil approprié : [jurisdictions-west-africa.md](references/jurisdictions-west-africa.md), [jurisdictions-central-africa.md](references/jurisdictions-central-africa.md), [jurisdictions-comoros.md](references/jurisdictions-comoros.md), [jurisdictions-eu-france.md](references/jurisdictions-eu-france.md) ou [international-overlays.md](references/international-overlays.md).
 - Lire [verification-and-delivery.md](references/verification-and-delivery.md) avant toute livraison.
 
 ## Workflow
@@ -39,7 +39,7 @@ Inventorier pages, formulaires, comptes, paiements, messages, fichiers, journaux
 
 ### 3. Router
 
-Produire une matrice par juridiction et par matière : données personnelles, communications/traceurs, identité de l'éditeur, commerce électronique, consommation, secteur réglementé et paiements. Utiliser le skill compagnon `ohada-legal-practice` s'il est disponible pour les questions nationales ou OHADA qui dépassent les pages du site. À défaut, isoler ces questions, effectuer la recherche officielle nécessaire et signaler les points qui exigent une validation locale. Si le droit UE ou français est applicable, traiter directement ce régime à partir des sources officielles indiquées dans [international-overlays.md](references/international-overlays.md).
+Produire une matrice par juridiction et par matière : données personnelles, communications/traceurs, identité de l'éditeur, commerce électronique, consommation, secteur réglementé et paiements. Utiliser le skill compagnon `ohada-legal-practice` s'il est disponible pour les questions nationales ou OHADA qui dépassent les pages du site. À défaut, isoler ces questions, effectuer la recherche officielle nécessaire et signaler les points qui exigent une validation locale. Si le droit UE ou français est applicable, traiter directement ce régime avec [jurisdictions-eu-france.md](references/jurisdictions-eu-france.md), sans remplacer les obligations africaines également applicables.
 
 ### 4. Définir le jeu documentaire
 

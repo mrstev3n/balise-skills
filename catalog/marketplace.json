@@ -38,6 +38,7 @@
     { "id": "cookies", "label": "Cookies" },
     { "id": "ecommerce", "label": "E-commerce" },
     { "id": "francophone-africa", "label": "Francophone Africa" },
+    { "id": "gdpr", "label": "GDPR" },
     { "id": "jurisdiction-aware", "label": "Jurisdiction-aware" },
     { "id": "legal-research", "label": "Legal research" },
     { "id": "multi-jurisdiction", "label": "Multi-jurisdiction" },
@@ -86,12 +87,13 @@
       "id": "website-legal-compliance",
       "version": "0.1.0",
       "path": "skills/website-legal-compliance",
-      "summary": "Audit and drafting workflows for legal notices, privacy, cookies, and e-commerce across multiple jurisdictions.",
+      "summary": "Audit and drafting workflows for legal notices, privacy, cookies, and e-commerce, centered on francophone Africa with GDPR coverage when applicable.",
       "category": "legal",
       "tags": [
         "cookies",
         "ecommerce",
         "francophone-africa",
+        "gdpr",
         "jurisdiction-aware",
         "multi-jurisdiction",
         "privacy"

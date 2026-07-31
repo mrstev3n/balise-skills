@@ -1,12 +1,4 @@
-# Superpositions internationales
-
-## Union européenne et France
-
-Tester l'article 3 du RGPD : établissement dans l'Union, offre de biens ou services à des personnes dans l'Union, ou suivi de leur comportement dans l'Union. Une simple accessibilité ne suffit pas à elle seule; documenter les indices de ciblage et consulter les lignes directrices du CEPD.
-
-Si applicable, vérifier : RGPD, règles ePrivacy et loi nationale, transferts, représentant éventuel, autorités, prospection, consommation et règles d'éditeur. Pour la France, vérifier aussi loi Informatique et Libertés, LCEN, Code de la consommation et recommandations CNIL actuelles.
-
-Après ce test, construire directement les documents et contrôles nécessaires à partir des sources officielles actualisées : [EUR-Lex](https://eur-lex.europa.eu/eli/reg/2016/679/oj), [CEPD](https://www.edpb.europa.eu/documents/guideline/guidelines-32018-on-the-territorial-scope-of-the-gdpr-article-3-version-adopted_en), [CNIL](https://www.cnil.fr/fr/cookies-et-autres-traceurs/regles) et [Légifrance](https://www.legifrance.gouv.fr/). Ne pas dépendre d'un template ou d'un skill tiers pour produire la version livrable.
+# Autres superpositions internationales
 
 ## Canada et Québec
 

@@ -1,4 +1,4 @@
 interface:
   display_name: "Conformité juridique des sites"
-  short_description: "Mentions, confidentialité et cookies multi-pays"
-  default_prompt: "Utilise $website-legal-compliance pour auditer ce site et préparer ses documents juridiques selon les juridictions applicables."
+  short_description: "Conformité web Afrique francophone et RGPD"
+  default_prompt: "Utilise $website-legal-compliance pour déterminer les juridictions applicables, puis auditer ce site et préparer ses documents juridiques sans négliger les droits d'Afrique francophone ni le RGPD."
