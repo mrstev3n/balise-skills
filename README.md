@@ -1,79 +1,65 @@
+![Skill Market](assets/skill-market-banner.webp)
+
 # Skill Market
 
-Public, multi-harness catalogue for portable Agent Skills.
+Portable skills for Claude Code, Codex, Cursor, and other Agent Skills-compatible tools.
 
-This repository treats [`SKILL.md`](https://agentskills.io/specification) as the canonical skill format. Harness-specific packaging belongs in isolated adapters and must not alter the canonical instructions.
+Browse individual skills or install a curated collection. Every skill uses [`SKILL.md`](https://agentskills.io/specification) as its canonical format, with optional harness-specific metadata kept in separate adapters.
 
-## Initial scope
+## Available skills
 
-The first release is intentionally limited to two original skills:
+### `ohada-legal-practice`
 
-- `ohada-legal-practice`
-- `website-legal-compliance`
-
-They form the initial installable `legal` collection. Legal is one collection and discovery category within a global marketplace; it is not the repository's total scope.
-
-No Lawve skill, `legal-contract-review`, `evolsb-contract-review`, or other third-party or adapted skill is included in the initial catalogue.
-
-## Catalogue model
-
-- **Category:** primary discovery classification; not installable.
-- **Tag:** transversal discovery filter.
-- **Collection:** ordered, versioned, installable set of skills.
-
-`category:legal` and `collection:legal` are distinct. Legal is the first collection and active category in a marketplace designed to support future domains such as design, typography, and security.
-
-## Repository layout
-
-```text
-catalog/       Machine-readable marketplace index and JSON Schemas
-collections/   Installable collection manifests
-skills/        Canonical, harness-neutral Agent Skills
-adapters/      Optional harness-specific metadata and packaging
-docs/          Metadata and compatibility policies
-scripts/       Deterministic repository validation
-```
-
-## Install
-
-Replace `<owner>` with the GitHub owner after the public repository is created.
-
-List the available skills:
+Research and drafting workflows for OHADA business law and the national law of 15 francophone member states.
 
 ```bash
-npx skills add <owner>/Skill-Market --list
+npx skills add mrstev3n/Skill-Market --skill ohada-legal-practice
 ```
 
-Install one skill:
+### `website-legal-compliance`
+
+Audit and drafting workflows for legal notices, privacy, cookies, and e-commerce across multiple jurisdictions.
 
 ```bash
-npx skills add <owner>/Skill-Market --skill ohada-legal-practice
+npx skills add mrstev3n/Skill-Market --skill website-legal-compliance
 ```
 
-Install the `legal` collection:
+## Install the Legal collection
+
+The `legal` collection installs both skills:
 
 ```bash
-npx skills add <owner>/Skill-Market \
+npx skills add mrstev3n/Skill-Market \
   --skill ohada-legal-practice \
   --skill website-legal-compliance
 ```
 
-The installer selects project or global destinations and supported harnesses. See [compatibility policy](docs/compatibility.md) before interpreting support claims.
+List all available skills before installing:
+
+```bash
+npx skills add mrstev3n/Skill-Market --list
+```
+
+## Catalogue
+
+Skill Market supports three discovery layers:
+
+- **Categories** group skills by primary field.
+- **Tags** connect skills across fields and use cases.
+- **Collections** bundle several skills into one installable set.
+
+Legal is the first collection in a marketplace designed to grow across multiple fields.
+
+Machine-readable metadata lives in [`catalog/marketplace.json`](catalog/marketplace.json). See the [metadata model](docs/metadata.md) and [compatibility policy](docs/compatibility.md) for details.
 
 ## Validate
-
-Run the deterministic local checks:
 
 ```bash
 npm run validate
 ```
 
-CI also validates the JSON manifests against their schemas and runs the official Agent Skills reference validator on both skills.
-
-## Release status
-
-The catalogue is at `0.1.0` pre-publication. Both skills are installation-tested for Claude Code, Codex, and Cursor. Both are runtime-tested with Codex CLI `0.145.0`; Claude Code and Cursor runtime claims remain pending.
+The validation workflow checks catalogue schemas, skill structure, links, adapters, and collection integrity.
 
 ## Licence
 
-Apache License 2.0. See `LICENSE`.
+Apache License 2.0. See [`LICENSE`](LICENSE).

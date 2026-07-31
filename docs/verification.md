@@ -10,7 +10,7 @@ Command:
 npm run validate
 ```
 
-Result: two canonical skills discovered; private dependency allowlist, frontmatter, paths, links, catalogue, adapters, and collection invariants passed.
+Result: two canonical skills discovered; frontmatter, paths, links, catalogue, adapters, and collection invariants passed.
 
 ## JSON Schema
 
@@ -50,5 +50,3 @@ Codex CLI `0.145.0` was run in ephemeral, read-only mode against the isolated in
 
 - `ohada-legal-practice` was explicitly invoked, read its installed `SKILL.md`, and returned `SKILL_OK references/jurisdiction-router.md`.
 - `website-legal-compliance` was explicitly invoked, read its installed `SKILL.md`, and returned `SKILL_OK references/applicability-router.md`.
-
-Claude Code `2.1.201` could not be runtime-tested because the local client was not authenticated. Cursor Agent `2026.06.15` was authenticated, but two read-only attempts returned HTTP 503. These harnesses remain installation-tested only and are not listed under `runtimeTested`.

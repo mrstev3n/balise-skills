@@ -1,6 +1,6 @@
 # Catalogue metadata
 
-`catalog/marketplace.json` is the source of truth for discovery metadata. It is designed for command-line tooling and a future web catalogue.
+`catalog/marketplace.json` is the source of truth for discovery metadata. It supports command-line tooling and web catalogue interfaces.
 
 ## Category
 
@@ -14,8 +14,8 @@ A tag is a transversal filter. A skill may have several tags, and every used tag
 
 A collection is an ordered, versioned, installable set of skills. A collection may span categories. Its manifest lives under `collections/` and references skills by identifier.
 
-`category:legal` and `collection:legal` are separate entities. Legal is the first collection in Skill Market, not the total scope of the marketplace.
+`category:legal` and `collection:legal` are separate entities. Legal is one field within the broader Skill Market catalogue.
 
 ## Versioning
 
-The initial release uses a single `0.1.0` version across the catalogue, collection, and skills. Independent skill versioning may be introduced only with a documented migration and release policy.
+Catalogue, collection, and skill versions follow semantic versioning.

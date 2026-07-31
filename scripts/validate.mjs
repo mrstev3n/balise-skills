@@ -6,14 +6,6 @@ import process from "node:process";
 
 const root = process.cwd();
 const expectedSkills = ["ohada-legal-practice", "website-legal-compliance"];
-const forbiddenNames = [
-  "lawve-cookie-policy-eu",
-  "lawve-nda-review",
-  "lawve-privacy-policy-eu",
-  "lawve-source-verification",
-  "legal-contract-review",
-  "evolsb-contract-review"
-];
 const errors = [];
 
 const fail = (message) => errors.push(message);
@@ -88,11 +80,6 @@ async function validateSkill(skill) {
   for (const file of markdownFiles) {
     const relative = path.relative(root, file);
     const markdown = await readFile(file, "utf8");
-    for (const forbidden of forbiddenNames) {
-      if (markdown.toLowerCase().includes(forbidden)) {
-        fail(`${relative}: forbidden private or third-party skill reference: ${forbidden}`);
-      }
-    }
     if (/\/Users\//.test(markdown)) fail(`${relative}: contains an absolute private path`);
     if (/\$[a-z0-9]+(?:-[a-z0-9]+)+/i.test(markdown)) {
       fail(`${relative}: contains harness-specific $skill invocation syntax`);

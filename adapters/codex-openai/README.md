@@ -4,4 +4,4 @@ The `overlays/` tree mirrors the relative location of optional OpenAI interface 
 
 The canonical `SKILL.md` files do not depend on this adapter. Claude Code, Cursor, and other Agent Skills clients can consume them without OpenAI metadata.
 
-The adapter has not yet been runtime-tested. Do not mark Codex/OpenAI as `runtimeTested` in the catalogue until a packaged installation and invocation have been verified.
+Both canonical skills have been discovered and invoked with Codex CLI. Verification details are recorded in [`../../docs/verification.md`](../../docs/verification.md).

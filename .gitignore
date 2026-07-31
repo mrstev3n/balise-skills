@@ -3,3 +3,6 @@ dist/
 coverage/
 .DS_Store
 *.log
+MEMORY.md
+/assets/proposals/
+/assets/skill-market-banner.jpg

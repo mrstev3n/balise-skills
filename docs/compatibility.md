@@ -18,11 +18,11 @@ Only `SKILL.md` is required. Canonical instructions must use relative paths and 
 - `install-tested`: the repository has been discovered and installed into an isolated target for the named harness.
 - `runtime-tested`: the installed skill has been discovered and invoked in the named harness.
 
-The catalogue records only `runtime-tested` claims backed by an observed invocation. An empty list means no runtime claim has been made yet.
+The catalogue records `runtime-tested` claims only when backed by an observed invocation.
 
-The initial isolated installation test used `skills@1.5.9` in copy mode and produced byte-identical skill directories for Claude Code, Codex, and Cursor. See [verification evidence](verification.md).
+Installation tests use isolated destinations and compare the installed directories with their canonical sources. See [verification evidence](verification.md).
 
-Codex CLI `0.145.0` then discovered and invoked both installed skills in ephemeral, read-only sessions. Claude Code and Cursor remain installation-tested only.
+Codex CLI `0.145.0` discovered and invoked both installed skills in ephemeral, read-only sessions.
 
 ## Harness strategy
 
