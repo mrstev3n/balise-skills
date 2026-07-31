@@ -28,6 +28,46 @@ La valeur distinctive de ce skill est de couvrir les cadres souvent oubliés de 
 npx skills add mrstev3n/balise-skills --skill balise-web-legal
 ```
 
+### `balise-ux-writing`
+
+Un skill de content design pour créer, réviser et harmoniser les textes d’interface : navigation, formulaires, erreurs, états vides, onboarding, confirmations, consentement et notifications. Il préserve la terminologie du produit, l’accessibilité, la localisation et les contraintes d’implémentation.
+
+```bash
+npx skills add mrstev3n/balise-skills --skill balise-ux-writing
+```
+
+### `balise-content-test`
+
+Un protocole de test pour confronter les interfaces à des contenus réalistes mais difficiles : textes longs, valeurs manquantes, données extrêmes, traduction, écriture RTL, Unicode, agrandissement du texte et espaces étroits.
+
+```bash
+npx skills add mrstev3n/balise-skills --skill balise-content-test
+```
+
+### `balise-affinity`
+
+Un guide de raisonnement et d’audit pour choisir les bons objets, modes de texte, structures de document et méthodes de production non destructive dans Affinity.
+
+```bash
+npx skills add mrstev3n/balise-skills --skill balise-affinity
+```
+
+### `balise-affinity-mcp`
+
+Un workflow d’automatisation pour inspecter et modifier un document Affinity avec le serveur MCP et le SDK JavaScript d’Affinity.
+
+```bash
+npx skills add mrstev3n/balise-skills --skill balise-affinity-mcp
+```
+
+### `balise-brand-naming`
+
+Une méthode structurée pour clarifier les fondations d’une marque, explorer plusieurs territoires de naming, filtrer les candidats et effectuer de premières vérifications numériques, linguistiques, culturelles et juridiques.
+
+```bash
+npx skills add mrstev3n/balise-skills --skill balise-brand-naming
+```
+
 ## Installer la collection `legal`
 
 La collection `legal` installe les deux skills :
@@ -36,6 +76,23 @@ La collection `legal` installe les deux skills :
 npx skills add mrstev3n/balise-skills \
   --skill balise-ohada \
   --skill balise-web-legal
+```
+
+## Installer la collection `content`
+
+```bash
+npx skills add mrstev3n/balise-skills \
+  --skill balise-ux-writing \
+  --skill balise-content-test
+```
+
+## Installer la collection `design`
+
+```bash
+npx skills add mrstev3n/balise-skills \
+  --skill balise-affinity \
+  --skill balise-affinity-mcp \
+  --skill balise-brand-naming
 ```
 
 Pour afficher tous les skills disponibles avant l’installation :
@@ -52,7 +109,7 @@ Balise Skills propose trois niveaux de découverte :
 - Les **tags** relient les skills selon leurs sujets et leurs usages.
 - Les **collections** réunissent plusieurs skills dans un ensemble installable.
 
-La collection `legal` inaugure un catalogue conçu pour couvrir plusieurs domaines.
+Les collections `legal`, `content` et `design` composent un catalogue conçu pour couvrir plusieurs domaines.
 
 Les métadonnées exploitables par des outils se trouvent dans [`catalog/marketplace.json`](catalog/marketplace.json). Consultez le [modèle de métadonnées](docs/metadata.md) et la [politique de compatibilité](docs/compatibility.md) pour en savoir plus.
 

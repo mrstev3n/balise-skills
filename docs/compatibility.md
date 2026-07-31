@@ -22,7 +22,7 @@ The catalogue records `runtime-tested` claims only when backed by an observed in
 
 Installation tests use isolated destinations and compare the installed directories with their canonical sources. See [verification evidence](verification.md).
 
-Codex CLI `0.145.0` discovered and invoked both installed skills in ephemeral, read-only sessions.
+Runtime evidence is recorded per skill and per tested harness version in the catalogue.
 
 ## Harness strategy
 
