@@ -1,6 +1,6 @@
 # Compatibility policy
 
-Skill Market uses the open Agent Skills directory format as its portability boundary:
+Balise Skills uses the open Agent Skills directory format as its portability boundary:
 
 ```text
 skill-name/

@@ -1,6 +1,6 @@
 # Security policy
 
-Report vulnerabilities through a [private GitHub security advisory](https://github.com/mrstev3n/Skill-Market/security/advisories/new). Please do not disclose exploitable issues in a public issue.
+Report vulnerabilities through a [private GitHub security advisory](https://github.com/mrstev3n/balise-skills/security/advisories/new). Please do not disclose exploitable issues in a public issue.
 
 Useful reports include prompt injection, secret exposure, unsafe commands, malicious dependencies, misleading legal claims, and unexpected network behaviour.
 

@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://skill-market.example/schemas/marketplace.schema.json",
-  "title": "Skill Market catalogue",
+  "$id": "https://balise-skills.example/schemas/marketplace.schema.json",
+  "title": "Balise Skills catalogue",
   "type": "object",
   "additionalProperties": false,
   "required": [

@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://skill-market.example/schemas/collection.schema.json",
-  "title": "Skill Market collection",
+  "$id": "https://balise-skills.example/schemas/collection.schema.json",
+  "title": "Balise Skills collection",
   "type": "object",
   "additionalProperties": false,
   "required": [

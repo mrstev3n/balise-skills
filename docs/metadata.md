@@ -14,7 +14,7 @@ A tag is a transversal filter. A skill may have several tags, and every used tag
 
 A collection is an ordered, versioned, installable set of skills. A collection may span categories. Its manifest lives under `collections/` and references skills by identifier.
 
-`category:legal` and `collection:legal` are separate entities. Legal is one field within the broader Skill Market catalogue.
+`category:legal` and `collection:legal` are separate entities. Legal is one field within the broader Balise Skills catalogue.
 
 ## Versioning
 
