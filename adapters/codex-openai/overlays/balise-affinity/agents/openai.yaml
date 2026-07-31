@@ -1,0 +1,4 @@
+interface:
+  display_name: "Balise — Affinity"
+  short_description: "Understand Affinity concepts and workflow choices"
+  default_prompt: "Use $balise-affinity to reason about Affinity object choices, workflows, and visual verification."

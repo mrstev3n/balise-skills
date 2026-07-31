@@ -1,0 +1,4 @@
+interface:
+  display_name: "Balise — Naming de marque"
+  short_description: "Structurer et évaluer un territoire de naming"
+  default_prompt: "Utilise $balise-brand-naming pour structurer cette idée de marque et produire une exploration de naming argumentée."

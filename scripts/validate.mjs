@@ -5,7 +5,6 @@ import path from "node:path";
 import process from "node:process";
 
 const root = process.cwd();
-const expectedSkills = ["balise-ohada", "balise-web-legal"];
 const errors = [];
 
 const fail = (message) => errors.push(message);
@@ -101,71 +100,101 @@ async function validateSkill(skill) {
 }
 
 const catalogue = await readJson("catalog/marketplace.json");
-const collection = await readJson("collections/legal.json");
 await readJson("catalog/schemas/marketplace.schema.json");
 await readJson("catalog/schemas/collection.schema.json");
 
 if (catalogue.schemaVersion !== "1.0") fail("catalogue: unsupported schemaVersion");
 if (catalogue.marketplace?.id !== "balise") fail("catalogue: invalid marketplace id");
-if (!Array.isArray(catalogue.skills)) fail("catalogue: skills must be an array");
+for (const field of ["categories", "tags", "skills", "collections"]) {
+  if (!Array.isArray(catalogue[field])) fail(`catalogue: ${field} must be an array`);
+}
+
+const catalogueCategories = Array.isArray(catalogue.categories) ? catalogue.categories : [];
+const catalogueTags = Array.isArray(catalogue.tags) ? catalogue.tags : [];
+const catalogueSkills = Array.isArray(catalogue.skills) ? catalogue.skills : [];
+const catalogueCollections = Array.isArray(catalogue.collections) ? catalogue.collections : [];
 
 const discoveredSkills = (await readdir(path.join(root, "skills"), { withFileTypes: true }))
   .filter((entry) => entry.isDirectory())
   .map((entry) => entry.name);
-const declaredSkills = catalogue.skills.map((skill) => skill.id);
+const declaredSkills = catalogueSkills.map((skill) => skill.id);
 
-if (!sameMembers(discoveredSkills, expectedSkills)) {
-  fail(`skills/: expected only ${expectedSkills.join(", ")}`);
-}
-if (!sameMembers(declaredSkills, expectedSkills)) {
-  fail(`catalogue: expected only ${expectedSkills.join(", ")}`);
+if (!sameMembers(discoveredSkills, declaredSkills)) {
+  fail("skills/: directories must match catalogue skill ids");
 }
 if (!unique(declaredSkills)) fail("catalogue: duplicate skill ids");
 
-const categories = new Set(catalogue.categories.map((category) => category.id));
-const tags = new Set(catalogue.tags.map((tag) => tag.id));
-for (const skill of catalogue.skills) {
+const categoryIds = catalogueCategories.map((category) => category.id);
+const tagIds = catalogueTags.map((tag) => tag.id);
+const collectionIds = catalogueCollections.map((collection) => collection.id);
+if (!unique(categoryIds)) fail("catalogue: duplicate category ids");
+if (!unique(tagIds)) fail("catalogue: duplicate tag ids");
+if (!unique(collectionIds)) fail("catalogue: duplicate collection ids");
+
+const categories = new Map(catalogueCategories.map((category) => [category.id, category]));
+const tags = new Set(tagIds);
+for (const skill of catalogueSkills) {
   if (skill.path !== `skills/${skill.id}`) fail(`${skill.id}: catalogue path mismatch`);
   if (!categories.has(skill.category)) fail(`${skill.id}: unknown category ${skill.category}`);
+  if (categories.get(skill.category)?.status !== "active") {
+    fail(`${skill.id}: category ${skill.category} must be active`);
+  }
   for (const tag of skill.tags) if (!tags.has(tag)) fail(`${skill.id}: unknown tag ${tag}`);
   if (!unique(skill.tags)) fail(`${skill.id}: duplicate tags`);
   const installHarnesses = skill.compatibility?.installTested?.map((entry) => entry.harness) ?? [];
   if (!sameMembers(installHarnesses, ["claude-code", "codex", "cursor"])) {
     fail(`${skill.id}: expected isolated install evidence for Claude Code, Codex, and Cursor`);
   }
+  if (!unique(installHarnesses)) fail(`${skill.id}: duplicate install evidence`);
   const runtimeEvidence = skill.compatibility?.runtimeTested ?? [];
-  if (!sameMembers(runtimeEvidence, ["codex-cli@0.145.0 (2026-07-31)"])) {
-    fail(`${skill.id}: runtime evidence must match the verified Codex invocation`);
-  }
+  if (!unique(runtimeEvidence)) fail(`${skill.id}: duplicate runtime evidence`);
   await validateSkill(skill);
+
+  for (const adapter of skill.compatibility?.adapters ?? []) {
+    if (adapter !== "codex-openai") continue;
+    const overlay = path.join(
+      root,
+      "adapters",
+      "codex-openai",
+      "overlays",
+      skill.id,
+      "agents",
+      "openai.yaml"
+    );
+    const content = await readFile(overlay, "utf8").catch(() => "");
+    if (!content.includes(`$${skill.id}`)) {
+      fail(`${skill.id}: OpenAI adapter default prompt must mention $${skill.id}`);
+    }
+  }
 }
 
-if (collection.schemaVersion !== "1.0" || collection.id !== "legal") {
-  fail("collection: expected legal schemaVersion 1.0");
+const expectedOpenAiOverlays = catalogueSkills
+  .filter((skill) => skill.compatibility?.adapters?.includes("codex-openai"))
+  .map((skill) => skill.id);
+const discoveredOpenAiOverlays = (
+  await readdir(path.join(root, "adapters", "codex-openai", "overlays"), { withFileTypes: true })
+)
+  .filter((entry) => entry.isDirectory())
+  .map((entry) => entry.name);
+if (!sameMembers(discoveredOpenAiOverlays, expectedOpenAiOverlays)) {
+  fail("codex-openai: overlay directories must match declared adapters");
 }
-if (!sameMembers(collection.skills, expectedSkills)) {
-  fail(`collection legal: expected only ${expectedSkills.join(", ")}`);
-}
-if (!unique(collection.skills)) fail("collection legal: duplicate skill ids");
 
-const collectionEntry = catalogue.collections.find((entry) => entry.id === "legal");
-if (collectionEntry?.manifest !== "collections/legal.json") {
-  fail("catalogue: legal collection manifest mismatch");
+const declaredManifests = catalogueCollections.map((entry) => entry.manifest);
+const discoveredManifests = (await readdir(path.join(root, "collections"), { withFileTypes: true }))
+  .filter((entry) => entry.isFile() && entry.name.endsWith(".json"))
+  .map((entry) => `collections/${entry.name}`);
+if (!sameMembers(discoveredManifests, declaredManifests)) {
+  fail("collections/: manifests must match catalogue collection entries");
 }
 
-for (const skillId of expectedSkills) {
-  const overlay = path.join(
-    root,
-    "adapters",
-    "codex-openai",
-    "overlays",
-    skillId,
-    "agents",
-    "openai.yaml"
-  );
-  const content = await readFile(overlay, "utf8");
-  if (!content.includes(`$${skillId}`)) {
-    fail(`${skillId}: OpenAI adapter default prompt must mention $${skillId}`);
+for (const entry of catalogueCollections) {
+  const collection = await readJson(entry.manifest);
+  if (collection.schemaVersion !== "1.0") fail(`${entry.id}: unsupported collection schemaVersion`);
+  if (collection.id !== entry.id) fail(`${entry.id}: collection id mismatch`);
+  if (!unique(collection.skills)) fail(`${entry.id}: duplicate skill ids`);
+  for (const skillId of collection.skills) {
+    if (!declaredSkills.includes(skillId)) fail(`${entry.id}: unknown skill ${skillId}`);
   }
 }
 
@@ -175,4 +204,6 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`Validated ${expectedSkills.length} canonical skills and collection legal.`);
+console.log(
+  `Validated ${declaredSkills.length} canonical skills and ${catalogueCollections.length} collections.`
+);

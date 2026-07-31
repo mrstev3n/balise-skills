@@ -1,0 +1,4 @@
+interface:
+  display_name: "Balise — Test de contenu"
+  short_description: "Stress-test UI resilience with realistic content"
+  default_prompt: "Use $balise-content-test to test this interface with difficult but realistic content and document the evidence."

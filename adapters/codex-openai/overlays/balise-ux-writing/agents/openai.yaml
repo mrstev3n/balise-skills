@@ -1,0 +1,4 @@
+interface:
+  display_name: "Balise — UX Writing"
+  short_description: "Review and improve user-centered interface copy"
+  default_prompt: "Use $balise-ux-writing to review this interface copy and propose only evidence-based improvements."

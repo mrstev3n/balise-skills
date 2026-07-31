@@ -1,0 +1,4 @@
+interface:
+  display_name: "Balise — Automatisation Affinity"
+  short_description: "Manipulate Affinity documents and objects"
+  default_prompt: "Use $balise-affinity-mcp to inspect and edit the current Affinity document."

@@ -1,0 +1,12 @@
+{
+  "$schema": "../catalog/schemas/collection.schema.json",
+  "schemaVersion": "1.0",
+  "id": "content",
+  "name": "Content",
+  "description": "UX writing and interface content resilience workflows.",
+  "version": "0.1.0",
+  "skills": [
+    "balise-ux-writing",
+    "balise-content-test"
+  ]
+}

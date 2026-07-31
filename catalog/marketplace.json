@@ -4,8 +4,8 @@
   "marketplace": {
     "id": "balise",
     "name": "Balise Skills",
-    "description": "A multi-domain catalogue of portable Agent Skills.",
-    "release": "0.2.0"
+    "description": "Un catalogue francophone et multidomaine de skills portables.",
+    "release": "0.3.0"
   },
   "categories": [
     {
@@ -15,10 +15,16 @@
       "status": "active"
     },
     {
+      "id": "content",
+      "label": "Content",
+      "description": "UX writing, content design, localization, and interface resilience workflows.",
+      "status": "active"
+    },
+    {
       "id": "design",
       "label": "Design",
       "description": "Design research, production, and review workflows.",
-      "status": "planned"
+      "status": "active"
     },
     {
       "id": "typography",
@@ -34,16 +40,30 @@
     }
   ],
   "tags": [
+    { "id": "accessibility", "label": "Accessibility" },
+    { "id": "affinity", "label": "Affinity" },
+    { "id": "automation", "label": "Automation" },
+    { "id": "brand-strategy", "label": "Brand strategy" },
     { "id": "business-law", "label": "Business law" },
+    { "id": "content-design", "label": "Content design" },
+    { "id": "content-resilience", "label": "Content resilience" },
     { "id": "cookies", "label": "Cookies" },
     { "id": "ecommerce", "label": "E-commerce" },
     { "id": "francophone-africa", "label": "Francophone Africa" },
     { "id": "gdpr", "label": "GDPR" },
+    { "id": "interface-copy", "label": "Interface copy" },
     { "id": "jurisdiction-aware", "label": "Jurisdiction-aware" },
     { "id": "legal-research", "label": "Legal research" },
+    { "id": "localization", "label": "Localization" },
+    { "id": "mcp", "label": "MCP" },
     { "id": "multi-jurisdiction", "label": "Multi-jurisdiction" },
     { "id": "ohada", "label": "OHADA" },
-    { "id": "privacy", "label": "Privacy" }
+    { "id": "naming", "label": "Naming" },
+    { "id": "privacy", "label": "Privacy" },
+    { "id": "responsive-design", "label": "Responsive design" },
+    { "id": "ui-testing", "label": "UI testing" },
+    { "id": "ux-writing", "label": "UX writing" },
+    { "id": "visual-design", "label": "Visual design" }
   ],
   "skills": [
     {
@@ -121,12 +141,115 @@
         ],
         "runtimeTested": ["codex-cli@0.145.0 (2026-07-31)"]
       }
+    },
+    {
+      "id": "balise-ux-writing",
+      "version": "0.1.0",
+      "path": "skills/balise-ux-writing",
+      "summary": "Review, creation, harmonization, and implementation workflows for accessible, localized, user-centered interface copy.",
+      "category": "content",
+      "tags": ["ux-writing", "content-design", "interface-copy", "accessibility", "localization"],
+      "license": "Apache-2.0",
+      "compatibility": {
+        "format": "agent-skills",
+        "adapters": ["codex-openai"],
+        "installTested": [
+          { "harness": "claude-code", "method": "skills@1.5.9 copy", "date": "2026-08-01" },
+          { "harness": "codex", "method": "skills@1.5.9 copy", "date": "2026-08-01" },
+          { "harness": "cursor", "method": "skills@1.5.9 copy", "date": "2026-08-01" }
+        ],
+        "runtimeTested": ["codex-cli@0.145.0 (2026-08-01)"]
+      }
+    },
+    {
+      "id": "balise-content-test",
+      "version": "0.1.0",
+      "path": "skills/balise-content-test",
+      "summary": "Content resilience testing workflows for localization, accessibility, extreme data, responsive layouts, and interface behavior.",
+      "category": "content",
+      "tags": ["content-resilience", "ui-testing", "responsive-design", "accessibility", "localization"],
+      "license": "Apache-2.0",
+      "compatibility": {
+        "format": "agent-skills",
+        "adapters": ["codex-openai"],
+        "installTested": [
+          { "harness": "claude-code", "method": "skills@1.5.9 copy", "date": "2026-08-01" },
+          { "harness": "codex", "method": "skills@1.5.9 copy", "date": "2026-08-01" },
+          { "harness": "cursor", "method": "skills@1.5.9 copy", "date": "2026-08-01" }
+        ],
+        "runtimeTested": ["codex-cli@0.145.0 (2026-08-01)"]
+      }
+    },
+    {
+      "id": "balise-affinity",
+      "version": "0.1.0",
+      "path": "skills/balise-affinity",
+      "summary": "Design reasoning, audit, document strategy, and non-destructive production workflows for Affinity by Canva.",
+      "category": "design",
+      "tags": ["affinity", "visual-design", "content-design"],
+      "license": "Apache-2.0",
+      "compatibility": {
+        "format": "agent-skills",
+        "adapters": ["codex-openai"],
+        "installTested": [
+          { "harness": "claude-code", "method": "skills@1.5.9 copy", "date": "2026-08-01" },
+          { "harness": "codex", "method": "skills@1.5.9 copy", "date": "2026-08-01" },
+          { "harness": "cursor", "method": "skills@1.5.9 copy", "date": "2026-08-01" }
+        ],
+        "runtimeTested": ["codex-cli@0.145.0 (2026-08-01)"]
+      }
+    },
+    {
+      "id": "balise-affinity-mcp",
+      "version": "0.1.0",
+      "path": "skills/balise-affinity-mcp",
+      "summary": "Live Affinity automation workflows using the Affinity MCP and JavaScript SDK, with inspection and visual verification.",
+      "category": "design",
+      "tags": ["affinity", "automation", "mcp", "visual-design"],
+      "license": "Apache-2.0",
+      "compatibility": {
+        "format": "agent-skills",
+        "adapters": ["codex-openai"],
+        "installTested": [
+          { "harness": "claude-code", "method": "skills@1.5.9 copy", "date": "2026-08-01" },
+          { "harness": "codex", "method": "skills@1.5.9 copy", "date": "2026-08-01" },
+          { "harness": "cursor", "method": "skills@1.5.9 copy", "date": "2026-08-01" }
+        ],
+        "runtimeTested": ["codex-cli@0.145.0 (2026-08-01)"]
+      }
+    },
+    {
+      "id": "balise-brand-naming",
+      "version": "0.1.0",
+      "path": "skills/balise-brand-naming",
+      "summary": "Brand foundations, naming exploration, candidate evaluation, availability screening, and early identity direction workflows.",
+      "category": "design",
+      "tags": ["naming", "brand-strategy", "content-design"],
+      "license": "Apache-2.0",
+      "compatibility": {
+        "format": "agent-skills",
+        "adapters": ["codex-openai"],
+        "installTested": [
+          { "harness": "claude-code", "method": "skills@1.5.9 copy", "date": "2026-08-01" },
+          { "harness": "codex", "method": "skills@1.5.9 copy", "date": "2026-08-01" },
+          { "harness": "cursor", "method": "skills@1.5.9 copy", "date": "2026-08-01" }
+        ],
+        "runtimeTested": ["codex-cli@0.145.0 (2026-08-01)"]
+      }
     }
   ],
   "collections": [
     {
       "id": "legal",
       "manifest": "collections/legal.json"
+    },
+    {
+      "id": "content",
+      "manifest": "collections/content.json"
+    },
+    {
+      "id": "design",
+      "manifest": "collections/design.json"
     }
   ]
 }

@@ -21,17 +21,21 @@ jobs:
       - name: Validate JSON Schemas
         run: |
           pipx run --spec 'check-jsonschema==0.37.4' check-jsonschema --schemafile catalog/schemas/marketplace.schema.json catalog/marketplace.json
-          pipx run --spec 'check-jsonschema==0.37.4' check-jsonschema --schemafile catalog/schemas/collection.schema.json collections/legal.json
+          for manifest in collections/*.json; do
+            pipx run --spec 'check-jsonschema==0.37.4' check-jsonschema --schemafile catalog/schemas/collection.schema.json "$manifest"
+          done
       - name: Validate Agent Skills
         run: |
-          pipx run --spec 'git+https://github.com/agentskills/agentskills.git@38a2ff82958afee88dadf4831509e6f7e9d8ef4e#subdirectory=skills-ref' skills-ref validate skills/balise-ohada
-          pipx run --spec 'git+https://github.com/agentskills/agentskills.git@38a2ff82958afee88dadf4831509e6f7e9d8ef4e#subdirectory=skills-ref' skills-ref validate skills/balise-web-legal
+          for skill in skills/*; do
+            pipx run --spec 'git+https://github.com/agentskills/agentskills.git@38a2ff82958afee88dadf4831509e6f7e9d8ef4e#subdirectory=skills-ref' skills-ref validate "$skill"
+          done
       - name: Smoke-test multi-harness installation
         run: |
           mkdir -p /tmp/balise-skills-smoke
           cd /tmp/balise-skills-smoke
-          npx --yes skills@1.5.9 add "$GITHUB_WORKSPACE" --agent claude-code codex cursor --skill balise-ohada balise-web-legal --copy --yes
-          diff -qr "$GITHUB_WORKSPACE/skills/balise-ohada" .agents/skills/balise-ohada
-          diff -qr "$GITHUB_WORKSPACE/skills/balise-web-legal" .agents/skills/balise-web-legal
-          diff -qr "$GITHUB_WORKSPACE/skills/balise-ohada" .claude/skills/balise-ohada
-          diff -qr "$GITHUB_WORKSPACE/skills/balise-web-legal" .claude/skills/balise-web-legal
+          skills=$(find "$GITHUB_WORKSPACE/skills" -mindepth 1 -maxdepth 1 -type d -exec basename {} \; | sort | tr '\n' ' ')
+          npx --yes skills@1.5.9 add "$GITHUB_WORKSPACE" --agent claude-code codex cursor --skill $skills --copy --yes
+          for skill in $skills; do
+            diff -qr "$GITHUB_WORKSPACE/skills/$skill" ".agents/skills/$skill"
+            diff -qr "$GITHUB_WORKSPACE/skills/$skill" ".claude/skills/$skill"
+          done
