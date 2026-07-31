@@ -91,7 +91,7 @@ Corpus de départ :
 
 Utiliser la [CDP](https://www.cdp.sn/legislation/textes-legislatifs) pour les textes, formalités et référentiels, tout en tenant compte du caractère indicatif déclaré de certaines informations du site. Tester données, transfert, sous-traitance, sécurité, commerce/preuve/signature, cyber, cryptologie, communications, cookies et prospection.
 
-Utiliser le skill compagnon `website-legal-compliance` s'il est disponible pour les documents publics de conformité, sans application automatique du RGPD.
+Utiliser le skill compagnon `balise-web-legal` s'il est disponible pour les documents publics de conformité, sans application automatique du RGPD.
 
 ## 8. Consommation, concurrence et investissement
 

@@ -2,10 +2,10 @@
   "$schema": "./schemas/marketplace.schema.json",
   "schemaVersion": "1.0",
   "marketplace": {
-    "id": "skill-market",
-    "name": "Skill Market",
+    "id": "balise",
+    "name": "Balise Skills",
     "description": "A multi-domain catalogue of portable Agent Skills.",
-    "release": "0.1.0"
+    "release": "0.2.0"
   },
   "categories": [
     {
@@ -47,9 +47,9 @@
   ],
   "skills": [
     {
-      "id": "ohada-legal-practice",
-      "version": "0.1.0",
-      "path": "skills/ohada-legal-practice",
+      "id": "balise-ohada",
+      "version": "0.2.0",
+      "path": "skills/balise-ohada",
       "summary": "Research and drafting workflows for OHADA business law and the national law of fifteen francophone member states.",
       "category": "legal",
       "tags": [
@@ -84,9 +84,9 @@
       }
     },
     {
-      "id": "website-legal-compliance",
-      "version": "0.1.0",
-      "path": "skills/website-legal-compliance",
+      "id": "balise-web-legal",
+      "version": "0.2.0",
+      "path": "skills/balise-web-legal",
       "summary": "Audit and drafting workflows for legal notices, privacy, cookies, and e-commerce, centered on francophone Africa with GDPR coverage when applicable.",
       "category": "legal",
       "tags": [

@@ -55,7 +55,7 @@ Corpus de départ via l’[ARCEP](https://www.arcep.td/lois.html) :
 
 Retrouver les textes authentiques, modifications, mesures d’application et effets des ordonnances de 2022. Le chantier de révision annoncé des lois 2015 et de l’ordonnance 2022 reste une réforme, pas du droit nouveau déjà applicable.
 
-Vérifier autorité données et fonctionnement actuel via ARCEP/ANSICE et les actes publiés. Tester données, formalités, droits, transferts, sécurité, transaction/preuve/signature, cyber, communications, cookies, prospection, commerce et paiement. Utiliser le skill compagnon `website-legal-compliance` s'il est disponible pour les documents publics.
+Vérifier autorité données et fonctionnement actuel via ARCEP/ANSICE et les actes publiés. Tester données, formalités, droits, transferts, sécurité, transaction/preuve/signature, cyber, communications, cookies, prospection, commerce et paiement. Utiliser le skill compagnon `balise-web-legal` s'il est disponible pour les documents publics.
 
 ## 6. Consommation, concurrence et investissement
 

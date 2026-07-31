@@ -80,7 +80,7 @@ Corpus de départ :
 
 Utiliser la [liste des lois de la CIL](https://cil.bf/?page_id=1017), puis ouvrir les textes et actes d’application. Séparer : données/formalités CIL; contrats/signature/preuve; communications; sécurité des systèmes; infractions cyber; commerce électronique; cookies/prospection; paiements.
 
-Utiliser le skill compagnon `website-legal-compliance` s'il est disponible pour les documents de conformité publique, après qualification burkinabè.
+Utiliser le skill compagnon `balise-web-legal` s'il est disponible pour les documents de conformité publique, après qualification burkinabè.
 
 ## 7. Consommation, concurrence et investissement
 

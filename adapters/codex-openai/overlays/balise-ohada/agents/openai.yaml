@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pratique juridique OHADA"
+  short_description: "Droit OHADA et national francophone actualisé"
+  default_prompt: "Utilise $balise-ohada pour qualifier les juridictions, vérifier le droit en vigueur et analyser cette question en droit OHADA et national."

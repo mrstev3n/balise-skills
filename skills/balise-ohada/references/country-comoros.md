@@ -62,7 +62,7 @@ Le décret n° 24-003/PR présente une incohérence de date entre notice et fich
 
 Aucun texte général autonome sur transactions/signature électroniques n’a été identifié. Ne pas déduire son existence de la loi communications; rechercher les règles spéciales.
 
-Tester données, autorité, formalités, droits, transferts, sécurité, cyber, communications, preuve/signature, commerce électronique, cookies, prospection et paiement. Utiliser le skill compagnon `website-legal-compliance` s'il est disponible pour les politiques publiques.
+Tester données, autorité, formalités, droits, transferts, sécurité, cyber, communications, preuve/signature, commerce électronique, cookies, prospection et paiement. Utiliser le skill compagnon `balise-web-legal` s'il est disponible pour les politiques publiques.
 
 ## 6. Consommation, concurrence et investissement
 

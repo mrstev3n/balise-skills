@@ -66,7 +66,7 @@ Chaîne minimale :
 
 La stratégie nationale publiée en 2026 cite conjointement la loi cyber 2019 et le Code pénal 2024. Ne pas affirmer l’abrogation de la première sans texte; analyser spécialité, conflit et droit transitoire.
 
-Utiliser l’[APDP](https://apdp.ml/) pour l’autorité et les procédures actuelles. Tester données, formalités, droits, transfert, sécurité, transaction/preuve/signature, cryptologie, cyber, commerce électronique, cookies et paiement. Utiliser le skill compagnon `website-legal-compliance` s'il est disponible pour les politiques publiques.
+Utiliser l’[APDP](https://apdp.ml/) pour l’autorité et les procédures actuelles. Tester données, formalités, droits, transfert, sécurité, transaction/preuve/signature, cryptologie, cyber, commerce électronique, cookies et paiement. Utiliser le skill compagnon `balise-web-legal` s'il est disponible pour les politiques publiques.
 
 ## 6. Consommation, concurrence et investissement
 

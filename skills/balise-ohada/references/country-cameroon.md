@@ -54,7 +54,7 @@ Corpus :
 - loi-cadre n° 2011/012 sur protection du consommateur;
 - loi n° 98/013 sur concurrence.
 
-Pour la loi données 2024, vérifier entrée en application, transition, autorité et décrets pris depuis son adoption. Tester données, droits, transferts, formalités, sécurité, cyber, communication, contrat/preuve/signature, prospection, cookies et consommation. Utiliser le skill compagnon `website-legal-compliance` s'il est disponible pour les documents publics.
+Pour la loi données 2024, vérifier entrée en application, transition, autorité et décrets pris depuis son adoption. Tester données, droits, transferts, formalités, sécurité, cyber, communication, contrat/preuve/signature, prospection, cookies et consommation. Utiliser le skill compagnon `balise-web-legal` s'il est disponible pour les documents publics.
 
 ## 6. Investissement, fiscalité et régimes régionaux
 

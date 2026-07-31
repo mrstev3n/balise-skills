@@ -1,5 +1,5 @@
 ---
-name: website-legal-compliance
+name: balise-web-legal
 description: "Auditer et préparer les informations juridiques d'un site, d'une application ou d'un service numérique multi-juridiction : mentions légales, politique de confidentialité, information au point de collecte, politique et interface cookies, informations e-commerce et plan d'implémentation. Utiliser en priorité pour les juridictions d'Afrique francophone — Bénin, Burkina Faso, Cameroun, RCA, Tchad, Comores, Congo, Côte d'Ivoire, Gabon, Guinée, Mali, Niger, RDC, Sénégal et Togo — et pour leurs superpositions avec le Ghana, la France/UE (RGPD) ou le Canada/Québec."
 ---
 
@@ -39,7 +39,7 @@ Inventorier pages, formulaires, comptes, paiements, messages, fichiers, journaux
 
 ### 3. Router
 
-Produire une matrice par juridiction et par matière : données personnelles, communications/traceurs, identité de l'éditeur, commerce électronique, consommation, secteur réglementé et paiements. Utiliser le skill compagnon `ohada-legal-practice` s'il est disponible pour les questions nationales ou OHADA qui dépassent les pages du site. À défaut, isoler ces questions, effectuer la recherche officielle nécessaire et signaler les points qui exigent une validation locale. Si le droit UE ou français est applicable, traiter directement ce régime avec [jurisdictions-eu-france.md](references/jurisdictions-eu-france.md), sans remplacer les obligations africaines également applicables.
+Produire une matrice par juridiction et par matière : données personnelles, communications/traceurs, identité de l'éditeur, commerce électronique, consommation, secteur réglementé et paiements. Utiliser le skill compagnon `balise-ohada` s'il est disponible pour les questions nationales ou OHADA qui dépassent les pages du site. À défaut, isoler ces questions, effectuer la recherche officielle nécessaire et signaler les points qui exigent une validation locale. Si le droit UE ou français est applicable, traiter directement ce régime avec [jurisdictions-eu-france.md](references/jurisdictions-eu-france.md), sans remplacer les obligations africaines également applicables.
 
 ### 4. Définir le jeu documentaire
 

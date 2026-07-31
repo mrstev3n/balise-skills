@@ -103,7 +103,7 @@ Construire la chaîne de versions suivante :
 - [loi n° 2019-014 du 29 octobre 2019 relative aux données personnelles](https://jo.gouv.tg/node/15411);
 - [décret n° 2020-111/PR](https://jo.gouv.tg/node/15560) relatif à l’IPDCP.
 
-Tester : contrat et information en ligne; signature/preuve; archivage; responsabilité des prestataires; données et formalités IPDCP; transferts; cookies/prospection; sécurité; notification; cybercriminalité; communications; paiement. Utiliser le skill compagnon `website-legal-compliance` s'il est disponible pour les politiques publiques, après qualification togolaise.
+Tester : contrat et information en ligne; signature/preuve; archivage; responsabilité des prestataires; données et formalités IPDCP; transferts; cookies/prospection; sécurité; notification; cybercriminalité; communications; paiement. Utiliser le skill compagnon `balise-web-legal` s'il est disponible pour les politiques publiques, après qualification togolaise.
 
 ## 7. Consommation, concurrence et investissement
 

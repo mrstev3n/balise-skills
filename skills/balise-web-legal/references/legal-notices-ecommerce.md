@@ -12,7 +12,7 @@ Vérifier selon le pays, la forme et l'activité :
 - autorité, agrément, ordre, titre et règles professionnelles;
 - propriété intellectuelle et licences lorsque pertinent.
 
-Ne pas copier les mentions françaises dans un site africain sans source nationale. Utiliser le skill compagnon `ohada-legal-practice` s'il est disponible pour vérifier l'identité juridique, les registres, le droit des sociétés et les activités réglementées; à défaut, effectuer cette vérification dans les sources officielles applicables.
+Ne pas copier les mentions françaises dans un site africain sans source nationale. Utiliser le skill compagnon `balise-ohada` s'il est disponible pour vérifier l'identité juridique, les registres, le droit des sociétés et les activités réglementées; à défaut, effectuer cette vérification dans les sources officielles applicables.
 
 ## E-commerce et consommateur
 

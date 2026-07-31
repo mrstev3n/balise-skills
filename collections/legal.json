@@ -4,9 +4,9 @@
   "id": "legal",
   "name": "Legal",
   "description": "Jurisdiction-aware legal research and website compliance workflows.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "skills": [
-    "ohada-legal-practice",
-    "website-legal-compliance"
+    "balise-ohada",
+    "balise-web-legal"
   ]
 }

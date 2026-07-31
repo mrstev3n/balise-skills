@@ -83,7 +83,7 @@ Corpus officiel de départ :
 
 Rechercher textes d’application, décisions et modifications via [ANSSI](https://anssi.gouv.ci/reglementations/) et [ARTCI](https://www.artci.ci/index.php?Itemid=118&id=35&option=com_content&view=category). Tester : base et formalité du traitement; droits; transfert; sous-traitance; sécurité; incident; cyber; preuve/signature; commerce électronique; cookies/prospection; communications; plateformes.
 
-Utiliser le skill compagnon `website-legal-compliance` s'il est disponible pour la politique de confidentialité, les cookies et les mentions légales, après qualification du droit ivoirien et d’un éventuel champ RGPD.
+Utiliser le skill compagnon `balise-web-legal` s'il est disponible pour la politique de confidentialité, les cookies et les mentions légales, après qualification du droit ivoirien et d’un éventuel champ RGPD.
 
 ## 7. Consommation, concurrence et investissement
 

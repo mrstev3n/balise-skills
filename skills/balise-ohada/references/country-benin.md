@@ -159,7 +159,7 @@ Tester séparément :
 - plateformes, hébergeurs, intermédiaires et commerce électronique;
 - paiements, identification, biométrie, vidéosurveillance et secteurs sensibles.
 
-Identifier le rôle actuel de l’ARCEP et de l’APDP dans le texte en vigueur. Pour une politique de confidentialité, des cookies ou des mentions légales, utiliser le skill compagnon `website-legal-compliance` s'il est disponible et conserver ce module pour déterminer le corpus béninois. Vérifier séparément un éventuel champ extraterritorial du RGPD; ne jamais l’appliquer par automatisme.
+Identifier le rôle actuel de l’ARCEP et de l’APDP dans le texte en vigueur. Pour une politique de confidentialité, des cookies ou des mentions légales, utiliser le skill compagnon `balise-web-legal` s'il est disponible et conserver ce module pour déterminer le corpus béninois. Vérifier séparément un éventuel champ extraterritorial du RGPD; ne jamais l’appliquer par automatisme.
 
 ## 11. Consommation et concurrence
 

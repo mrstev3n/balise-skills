@@ -25,8 +25,8 @@ Tool source: `agentskills/agentskills`, commit `38a2ff82958afee88dadf4831509e6f7
 Result:
 
 ```text
-Valid skill: skills/ohada-legal-practice
-Valid skill: skills/website-legal-compliance
+Valid skill: skills/balise-ohada
+Valid skill: skills/balise-web-legal
 ```
 
 ## Multi-harness installation
@@ -36,7 +36,7 @@ Command shape:
 ```bash
 npx --yes skills@1.5.9 add <local-repository> \
   --agent claude-code codex cursor \
-  --skill ohada-legal-practice website-legal-compliance \
+  --skill balise-ohada balise-web-legal \
   --copy --yes
 ```
 
@@ -48,5 +48,5 @@ This proves format and installation compatibility.
 
 Codex CLI `0.145.0` was run in ephemeral, read-only mode against the isolated installation.
 
-- `ohada-legal-practice` was explicitly invoked, read its installed `SKILL.md`, and returned `SKILL_OK references/jurisdiction-router.md`.
-- `website-legal-compliance` was explicitly invoked, read its installed `SKILL.md`, and returned `SKILL_OK references/applicability-router.md`.
+- `balise-ohada` was explicitly invoked, read its installed `SKILL.md`, and returned `SKILL_OK references/jurisdiction-router.md`.
+- `balise-web-legal` was explicitly invoked, read its installed `SKILL.md`, and returned `SKILL_OK references/applicability-router.md`.

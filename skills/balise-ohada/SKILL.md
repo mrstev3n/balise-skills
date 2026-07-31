@@ -1,5 +1,5 @@
 ---
-name: ohada-legal-practice
+name: balise-ohada
 description: Rechercher, qualifier, actualiser, analyser, rédiger et réviser des questions et documents relevant du droit des affaires OHADA et des droits nationaux de quinze États francophones. Utiliser pour les sociétés et GIE, commerçants, baux professionnels, sûretés, recouvrement, procédures collectives, comptabilité, coopératives, transport, arbitrage, médiation, contrats, travail, droit numérique, notes juridiques, consultations préparatoires et jurisprudence OHADA ou nationale.
 ---
 
@@ -16,7 +16,7 @@ Travailler comme assistant de recherche et de rédaction juridique francophone. 
 5. Ne citer que les articles, décisions et passages effectivement consultés. Signaler tout texte inaccessible, incomplet ou non consolidé.
 6. Séparer clairement : faits fournis, règle de droit, interprétation, application aux faits, recommandation pratique et point à confirmer par un professionnel habilité.
 7. Ne pas prétendre produire une consultation définitive, garantir l'issue d'un contentieux, authentifier un acte, accomplir une formalité ou remplacer les professions réglementées.
-8. Pour les politiques de confidentialité, cookies et mentions légales d'un site, utiliser le skill compagnon `website-legal-compliance` s'il est disponible. À défaut, identifier les textes numériques nationaux pertinents, documenter les limites de l'analyse et ne pas appliquer automatiquement le RGPD.
+8. Pour les politiques de confidentialité, cookies et mentions légales d'un site, utiliser le skill compagnon `balise-web-legal` s'il est disponible. À défaut, identifier les textes numériques nationaux pertinents, documenter les limites de l'analyse et ne pas appliquer automatiquement le RGPD.
 9. Pour le numérique et le travail, appliquer obligatoirement [current-law-protocol.md](references/current-law-protocol.md) et dater la vérification.
 
 ## Routeur obligatoire

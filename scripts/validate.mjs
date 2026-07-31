@@ -5,7 +5,7 @@ import path from "node:path";
 import process from "node:process";
 
 const root = process.cwd();
-const expectedSkills = ["ohada-legal-practice", "website-legal-compliance"];
+const expectedSkills = ["balise-ohada", "balise-web-legal"];
 const errors = [];
 
 const fail = (message) => errors.push(message);
@@ -106,7 +106,7 @@ await readJson("catalog/schemas/marketplace.schema.json");
 await readJson("catalog/schemas/collection.schema.json");
 
 if (catalogue.schemaVersion !== "1.0") fail("catalogue: unsupported schemaVersion");
-if (catalogue.marketplace?.id !== "skill-market") fail("catalogue: invalid marketplace id");
+if (catalogue.marketplace?.id !== "balise") fail("catalogue: invalid marketplace id");
 if (!Array.isArray(catalogue.skills)) fail("catalogue: skills must be an array");
 
 const discoveredSkills = (await readdir(path.join(root, "skills"), { withFileTypes: true }))

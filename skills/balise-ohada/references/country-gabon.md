@@ -53,7 +53,7 @@ Corpus :
 
 Pour chaque article données, identifier s’il provient du texte initial, du modificatif ou d’une consolidation. Vérifier APDPVP, décrets et décisions.
 
-Tester données, droits, transferts, formalités, sécurité, contrat/preuve/signature, prestataires, archivage, cyber, communications, cookies, prospection et commerce électronique. Utiliser le skill compagnon `website-legal-compliance` s'il est disponible pour les documents publics.
+Tester données, droits, transferts, formalités, sécurité, contrat/preuve/signature, prestataires, archivage, cyber, communications, cookies, prospection et commerce électronique. Utiliser le skill compagnon `balise-web-legal` s'il est disponible pour les documents publics.
 
 ## 6. Consommation, concurrence et investissement
 

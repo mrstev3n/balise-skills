@@ -60,7 +60,7 @@ Corpus de départ :
 
 **Contrôle bloquant :** un décret présidentiel signé le 8 juin 2026 a supprimé la HAPDP et réparti ses missions entre les ministères de la Justice et de l’Intérieur, selon un communiqué SGG relayé par l’[ANP](https://anp.ne/niger-plusieurs-services-rattaches-ou-sous-tutelle-de-la-presidence-de-la-primature-et-du-secretariat-general-du-gouvernement-supprimes/). Retrouver le décret exact, l’entrée en vigueur, la répartition des compétences et les canaux opérationnels. Ne jamais recommander un dépôt à la HAPDP sur la seule base d’anciennes pages.
 
-Tester données, formalités, autorité, droits, transferts, sécurité, transactions/signature/preuve, communications, cyber, cookies, prospection, commerce électronique et paiement. Utiliser le skill compagnon `website-legal-compliance` s'il est disponible pour les documents publics.
+Tester données, formalités, autorité, droits, transferts, sécurité, transactions/signature/preuve, communications, cyber, cookies, prospection, commerce électronique et paiement. Utiliser le skill compagnon `balise-web-legal` s'il est disponible pour les documents publics.
 
 ## 6. Consommation, concurrence et investissement
 

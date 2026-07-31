@@ -58,7 +58,7 @@ Citer le [scan officiel](https://www.arpt.gov.gn/wp-content/uploads/2021/04/loi_
 
 La révision des quatre lois numériques lancée en 2025 est documentée par des termes de référence : elle reste une réforme/procédure de marché tant qu’aucune nouvelle loi n’est publiée. Vérifier aussi les décrets 2026 sur audit/certification SI et identité SIM.
 
-Tester données, autorité, formalités, droits, transferts, sécurité, communications, transactions/signature/preuve, cyber, identité SIM, cookies, prospection et commerce électronique. Utiliser le skill compagnon `website-legal-compliance` s'il est disponible pour les documents publics.
+Tester données, autorité, formalités, droits, transferts, sécurité, communications, transactions/signature/preuve, cyber, identité SIM, cookies, prospection et commerce électronique. Utiliser le skill compagnon `balise-web-legal` s'il est disponible pour les documents publics.
 
 ## 6. Consommation, concurrence et investissement
 

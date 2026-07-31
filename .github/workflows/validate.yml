@@ -24,14 +24,14 @@ jobs:
           pipx run --spec 'check-jsonschema==0.37.4' check-jsonschema --schemafile catalog/schemas/collection.schema.json collections/legal.json
       - name: Validate Agent Skills
         run: |
-          pipx run --spec 'git+https://github.com/agentskills/agentskills.git@38a2ff82958afee88dadf4831509e6f7e9d8ef4e#subdirectory=skills-ref' skills-ref validate skills/ohada-legal-practice
-          pipx run --spec 'git+https://github.com/agentskills/agentskills.git@38a2ff82958afee88dadf4831509e6f7e9d8ef4e#subdirectory=skills-ref' skills-ref validate skills/website-legal-compliance
+          pipx run --spec 'git+https://github.com/agentskills/agentskills.git@38a2ff82958afee88dadf4831509e6f7e9d8ef4e#subdirectory=skills-ref' skills-ref validate skills/balise-ohada
+          pipx run --spec 'git+https://github.com/agentskills/agentskills.git@38a2ff82958afee88dadf4831509e6f7e9d8ef4e#subdirectory=skills-ref' skills-ref validate skills/balise-web-legal
       - name: Smoke-test multi-harness installation
         run: |
-          mkdir -p /tmp/skill-market-smoke
-          cd /tmp/skill-market-smoke
-          npx --yes skills@1.5.9 add "$GITHUB_WORKSPACE" --agent claude-code codex cursor --skill ohada-legal-practice website-legal-compliance --copy --yes
-          diff -qr "$GITHUB_WORKSPACE/skills/ohada-legal-practice" .agents/skills/ohada-legal-practice
-          diff -qr "$GITHUB_WORKSPACE/skills/website-legal-compliance" .agents/skills/website-legal-compliance
-          diff -qr "$GITHUB_WORKSPACE/skills/ohada-legal-practice" .claude/skills/ohada-legal-practice
-          diff -qr "$GITHUB_WORKSPACE/skills/website-legal-compliance" .claude/skills/website-legal-compliance
+          mkdir -p /tmp/balise-skills-smoke
+          cd /tmp/balise-skills-smoke
+          npx --yes skills@1.5.9 add "$GITHUB_WORKSPACE" --agent claude-code codex cursor --skill balise-ohada balise-web-legal --copy --yes
+          diff -qr "$GITHUB_WORKSPACE/skills/balise-ohada" .agents/skills/balise-ohada
+          diff -qr "$GITHUB_WORKSPACE/skills/balise-web-legal" .agents/skills/balise-web-legal
+          diff -qr "$GITHUB_WORKSPACE/skills/balise-ohada" .claude/skills/balise-ohada
+          diff -qr "$GITHUB_WORKSPACE/skills/balise-web-legal" .claude/skills/balise-web-legal

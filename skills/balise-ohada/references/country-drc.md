@@ -50,7 +50,7 @@ L’ordonnance-loi n° 23/010 du 13 mars 2023 porte Code du numérique. L’[ARP
 
 Obtenir le Code authentique du JO avant citation d’article. Vérifier mesures d’application, autorités et compétences. Tester données, formalités, droits, transferts, sécurité, services, communications, transaction/preuve/signature, cyber, plateformes, cookies, prospection et paiement.
 
-Le projet administratif « RDC-Pass » lancé en 2026 ne remplace pas automatiquement le Code numérique. Utiliser le skill compagnon `website-legal-compliance` s'il est disponible pour les documents publics.
+Le projet administratif « RDC-Pass » lancé en 2026 ne remplace pas automatiquement le Code numérique. Utiliser le skill compagnon `balise-web-legal` s'il est disponible pour les documents publics.
 
 ## 6. Consommation, concurrence et investissement
 

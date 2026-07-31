@@ -51,7 +51,7 @@ Une source officielle de la CNUCED identifie la loi n° 24.001 du 25 janvier 202
 
 Les corpus suivants restent à retrouver : commerce électronique; transactions/signature/preuve; cybersécurité; cybercriminalité; communications; consommation; concurrence.
 
-Tester chaque matière séparément et dire `non trouvé` si nécessaire. Utiliser le skill compagnon `website-legal-compliance` s'il est disponible pour les documents publics, mais ne produire aucune conformité fondée sur une loi non ouverte.
+Tester chaque matière séparément et dire `non trouvé` si nécessaire. Utiliser le skill compagnon `balise-web-legal` s'il est disponible pour les documents publics, mais ne produire aucune conformité fondée sur une loi non ouverte.
 
 ## 6. Investissement, fiscalité et régimes régionaux
 

@@ -52,7 +52,7 @@ Corpus :
 
 Le SGG qualifie la loi n° 37-2019 de « non publiée au JO » dans sa fiche : ne pas présenter cette fiche électronique comme preuve de publication authentique. Obtenir le support requis avant citation probatoire.
 
-Vérifier autorité données, décrets, formalités, droits, transferts, sécurité, transaction/preuve/signature, cyber, communications, cookies, prospection et commerce. Utiliser le skill compagnon `website-legal-compliance` s'il est disponible pour les documents publics.
+Vérifier autorité données, décrets, formalités, droits, transferts, sécurité, transaction/preuve/signature, cyber, communications, cookies, prospection et commerce. Utiliser le skill compagnon `balise-web-legal` s'il est disponible pour les documents publics.
 
 Pour consommation 2024, vérifier décrets et coexistence sectorielle. L’état actuel de la concurrence reste à établir; ne pas confondre projets 2021 et loi consommation.
 
