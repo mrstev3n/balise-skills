@@ -6,9 +6,43 @@ Des skills portables pour Claude Code, Codex, Cursor, le Figma Agent, Figma Make
 
 Installez un skill précis ou une collection prête à l’emploi. Chaque skill utilise [`SKILL.md`](https://agentskills.io/specification) comme format canonique. Les métadonnées propres à chaque outil restent isolées dans des adaptateurs.
 
-Les badges indiquent les éditions disponibles :
+## Accès rapide
+
+- [Installer les skills](#installation-guidée)
+- [Parcourir les skills disponibles](#skills-disponibles)
+- [Utiliser une édition Figma](#utiliser-une-édition-figma)
+- [Installer une collection](#collections)
+- [Explorer le catalogue](#catalogue)
+
+## Installation guidée
+
+Lancez l’assistant pour choisir les skills, les agents cibles et la portée de l’installation :
+
+```bash
+npx skills add mrstev3n/balise-skills
+```
+
+Selon votre environnement, le CLI détecte les agents installés ou vous laisse choisir parmi les outils compatibles, dont Claude Code, Codex, Cursor et OpenCode. Il propose ensuite une installation dans le projet ou globale, puis place chaque skill dans le répertoire attendu.
+
+Pour présélectionner tous les skills sans imposer l’agent ni la portée :
+
+```bash
+npx skills add mrstev3n/balise-skills --skill '*'
+```
+
+Pour consulter le catalogue sans rien installer :
+
+```bash
+npx skills add mrstev3n/balise-skills --list
+```
+
+## Comprendre les badges
+
+Les badges indiquent les éditions réellement disponibles :
 
 [![Agent Skills](assets/badges/agent-skills.svg)](docs/compatibility.md) [![Figma Agent](assets/badges/figma-agent.svg)](docs/compatibility.md) [![Figma Make](assets/badges/figma-make.svg)](docs/compatibility.md)
+
+---
 
 ## Skills disponibles
 
@@ -112,7 +146,9 @@ Lorsqu’un skill affiche les badges Figma, ouvrez le fichier `SKILL.md` lié, t
 
 Tous les skills ne possèdent pas nécessairement une édition Figma. Les badges indiquent uniquement les versions réellement disponibles.
 
-## Installer la collection `legal`
+## Collections
+
+### Collection `legal`
 
 La collection `legal` installe les deux skills :
 
@@ -122,7 +158,7 @@ npx skills add mrstev3n/balise-skills \
   --skill balise-web-legal
 ```
 
-## Installer la collection `content`
+### Collection `content`
 
 ```bash
 npx skills add mrstev3n/balise-skills \
@@ -130,7 +166,7 @@ npx skills add mrstev3n/balise-skills \
   --skill balise-content-test
 ```
 
-## Installer la collection `design`
+### Collection `design`
 
 ```bash
 npx skills add mrstev3n/balise-skills \
@@ -139,12 +175,6 @@ npx skills add mrstev3n/balise-skills \
   --skill balise-brand-naming \
   --skill balise-ui-states \
   --skill balise-visual-references
-```
-
-Pour afficher tous les skills disponibles avant l’installation :
-
-```bash
-npx skills add mrstev3n/balise-skills --list
 ```
 
 ## Catalogue
