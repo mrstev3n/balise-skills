@@ -5,7 +5,7 @@
     "id": "balise",
     "name": "Balise Skills",
     "description": "Un catalogue francophone et multidomaine de skills portables.",
-    "release": "0.3.0"
+    "release": "0.4.0"
   },
   "categories": [
     {
@@ -52,6 +52,7 @@
     { "id": "francophone-africa", "label": "Francophone Africa" },
     { "id": "gdpr", "label": "GDPR" },
     { "id": "interface-copy", "label": "Interface copy" },
+    { "id": "interface-states", "label": "Interface states" },
     { "id": "jurisdiction-aware", "label": "Jurisdiction-aware" },
     { "id": "legal-research", "label": "Legal research" },
     { "id": "localization", "label": "Localization" },
@@ -61,9 +62,11 @@
     { "id": "naming", "label": "Naming" },
     { "id": "privacy", "label": "Privacy" },
     { "id": "responsive-design", "label": "Responsive design" },
+    { "id": "design-research", "label": "Design research" },
     { "id": "ui-testing", "label": "UI testing" },
     { "id": "ux-writing", "label": "UX writing" },
-    { "id": "visual-design", "label": "Visual design" }
+    { "id": "visual-design", "label": "Visual design" },
+    { "id": "visual-references", "label": "Visual references" }
   ],
   "skills": [
     {
@@ -80,6 +83,13 @@
         "ohada"
       ],
       "license": "Apache-2.0",
+      "editions": [
+        {
+          "id": "agent-skills",
+          "path": "skills/balise-ohada",
+          "targets": ["claude-code", "codex", "cursor"]
+        }
+      ],
       "compatibility": {
         "format": "agent-skills",
         "adapters": ["codex-openai"],
@@ -119,6 +129,13 @@
         "privacy"
       ],
       "license": "Apache-2.0",
+      "editions": [
+        {
+          "id": "agent-skills",
+          "path": "skills/balise-web-legal",
+          "targets": ["claude-code", "codex", "cursor"]
+        }
+      ],
       "compatibility": {
         "format": "agent-skills",
         "adapters": ["codex-openai"],
@@ -150,6 +167,18 @@
       "category": "content",
       "tags": ["ux-writing", "content-design", "interface-copy", "accessibility", "localization"],
       "license": "Apache-2.0",
+      "editions": [
+        {
+          "id": "agent-skills",
+          "path": "skills/balise-ux-writing",
+          "targets": ["claude-code", "codex", "cursor"]
+        },
+        {
+          "id": "figma",
+          "path": "figma-skills/balise-ux-writing/SKILL.md",
+          "targets": ["figma-agent", "figma-make"]
+        }
+      ],
       "compatibility": {
         "format": "agent-skills",
         "adapters": ["codex-openai"],
@@ -169,6 +198,18 @@
       "category": "content",
       "tags": ["content-resilience", "ui-testing", "responsive-design", "accessibility", "localization"],
       "license": "Apache-2.0",
+      "editions": [
+        {
+          "id": "agent-skills",
+          "path": "skills/balise-content-test",
+          "targets": ["claude-code", "codex", "cursor"]
+        },
+        {
+          "id": "figma",
+          "path": "figma-skills/balise-content-test/SKILL.md",
+          "targets": ["figma-agent", "figma-make"]
+        }
+      ],
       "compatibility": {
         "format": "agent-skills",
         "adapters": ["codex-openai"],
@@ -188,6 +229,13 @@
       "category": "design",
       "tags": ["affinity", "visual-design", "content-design"],
       "license": "Apache-2.0",
+      "editions": [
+        {
+          "id": "agent-skills",
+          "path": "skills/balise-affinity",
+          "targets": ["claude-code", "codex", "cursor"]
+        }
+      ],
       "compatibility": {
         "format": "agent-skills",
         "adapters": ["codex-openai"],
@@ -207,6 +255,13 @@
       "category": "design",
       "tags": ["affinity", "automation", "mcp", "visual-design"],
       "license": "Apache-2.0",
+      "editions": [
+        {
+          "id": "agent-skills",
+          "path": "skills/balise-affinity-mcp",
+          "targets": ["claude-code", "codex", "cursor"]
+        }
+      ],
       "compatibility": {
         "format": "agent-skills",
         "adapters": ["codex-openai"],
@@ -226,6 +281,13 @@
       "category": "design",
       "tags": ["naming", "brand-strategy", "content-design"],
       "license": "Apache-2.0",
+      "editions": [
+        {
+          "id": "agent-skills",
+          "path": "skills/balise-brand-naming",
+          "targets": ["claude-code", "codex", "cursor"]
+        }
+      ],
       "compatibility": {
         "format": "agent-skills",
         "adapters": ["codex-openai"],
@@ -235,6 +297,68 @@
           { "harness": "cursor", "method": "skills@1.5.9 copy", "date": "2026-08-01" }
         ],
         "runtimeTested": ["codex-cli@0.145.0 (2026-08-01)"]
+      }
+    },
+    {
+      "id": "balise-ui-states",
+      "version": "0.1.0",
+      "path": "skills/balise-ui-states",
+      "summary": "Audit, design, implementation, and verification workflows for complete, recoverable interface states and transitions.",
+      "category": "design",
+      "tags": ["interface-states", "ui-testing", "accessibility", "content-design"],
+      "license": "Apache-2.0",
+      "editions": [
+        {
+          "id": "agent-skills",
+          "path": "skills/balise-ui-states",
+          "targets": ["claude-code", "codex", "cursor"]
+        },
+        {
+          "id": "figma",
+          "path": "figma-skills/balise-ui-states/SKILL.md",
+          "targets": ["figma-agent", "figma-make"]
+        }
+      ],
+      "compatibility": {
+        "format": "agent-skills",
+        "adapters": ["codex-openai"],
+        "installTested": [
+          { "harness": "claude-code", "method": "skills@1.5.9 copy", "date": "2026-08-01" },
+          { "harness": "codex", "method": "skills@1.5.9 copy", "date": "2026-08-01" },
+          { "harness": "cursor", "method": "skills@1.5.9 copy", "date": "2026-08-01" }
+        ],
+        "runtimeTested": []
+      }
+    },
+    {
+      "id": "balise-visual-references",
+      "version": "0.1.0",
+      "path": "skills/balise-visual-references",
+      "summary": "Guided visual-reference research, source selection, capture, and synthesis workflows for design decisions.",
+      "category": "design",
+      "tags": ["design-research", "visual-references", "visual-design", "content-design"],
+      "license": "Apache-2.0",
+      "editions": [
+        {
+          "id": "agent-skills",
+          "path": "skills/balise-visual-references",
+          "targets": ["claude-code", "codex", "cursor"]
+        },
+        {
+          "id": "figma",
+          "path": "figma-skills/balise-visual-references/SKILL.md",
+          "targets": ["figma-agent", "figma-make"]
+        }
+      ],
+      "compatibility": {
+        "format": "agent-skills",
+        "adapters": ["codex-openai"],
+        "installTested": [
+          { "harness": "claude-code", "method": "skills@1.5.9 copy", "date": "2026-08-01" },
+          { "harness": "codex", "method": "skills@1.5.9 copy", "date": "2026-08-01" },
+          { "harness": "cursor", "method": "skills@1.5.9 copy", "date": "2026-08-01" }
+        ],
+        "runtimeTested": []
       }
     }
   ],

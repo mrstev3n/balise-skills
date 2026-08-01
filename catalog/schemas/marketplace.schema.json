@@ -67,6 +67,7 @@
           "category",
           "tags",
           "license",
+          "editions",
           "compatibility"
         ],
         "properties": {
@@ -81,6 +82,31 @@
             "uniqueItems": true
           },
           "license": { "const": "Apache-2.0" },
+          "editions": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "$ref": "#/$defs/edition" },
+            "allOf": [
+              {
+                "contains": {
+                  "type": "object",
+                  "required": ["id"],
+                  "properties": { "id": { "const": "agent-skills" } }
+                },
+                "minContains": 1,
+                "maxContains": 1
+              },
+              {
+                "contains": {
+                  "type": "object",
+                  "required": ["id"],
+                  "properties": { "id": { "const": "figma" } }
+                },
+                "minContains": 0,
+                "maxContains": 1
+              }
+            ]
+          },
           "compatibility": {
             "type": "object",
             "additionalProperties": false,
@@ -144,6 +170,33 @@
           "format": "date"
         }
       }
+    },
+    "edition": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "path", "targets"],
+          "properties": {
+            "id": { "const": "agent-skills" },
+            "path": { "type": "string", "pattern": "^skills/[a-z0-9-]+$" },
+            "targets": { "const": ["claude-code", "codex", "cursor"] }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "path", "targets"],
+          "properties": {
+            "id": { "const": "figma" },
+            "path": {
+              "type": "string",
+              "pattern": "^figma-skills/[a-z0-9-]+/SKILL\\.md$"
+            },
+            "targets": { "const": ["figma-agent", "figma-make"] }
+          }
+        }
+      ]
     }
   }
 }

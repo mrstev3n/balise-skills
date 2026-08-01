@@ -99,6 +99,50 @@ async function validateSkill(skill) {
   }
 }
 
+async function validateFigmaEdition(skill, edition) {
+  const expectedPath = `figma-skills/${skill.id}/SKILL.md`;
+  if (edition.path !== expectedPath) {
+    fail(`${skill.id}: Figma edition path must be ${expectedPath}`);
+  }
+  if (!sameMembers(edition.targets ?? [], ["figma-agent", "figma-make"])) {
+    fail(`${skill.id}: Figma edition must target Figma Agent and Figma Make`);
+  }
+
+  const entrypoint = path.join(root, edition.path);
+  const directory = path.dirname(entrypoint);
+  const content = await readFile(entrypoint, "utf8").catch(() => "");
+  if (!content) {
+    fail(`${skill.id}: missing standalone Figma edition`);
+    return;
+  }
+
+  parseFrontmatter(content, skill.id);
+  if (content.split("\n").length > 500) fail(`${skill.id}: Figma edition exceeds 500 lines`);
+  if (/\/Users\//.test(content)) fail(`${skill.id}: Figma edition contains a private path`);
+  if (/\$[a-z0-9]+(?:-[a-z0-9]+)+/i.test(content)) {
+    fail(`${skill.id}: Figma edition contains harness-specific $skill syntax`);
+  }
+  if (/\bmcp__[a-z0-9_.-]+/i.test(content)) {
+    fail(`${skill.id}: Figma edition contains a harness-qualified MCP tool name`);
+  }
+  if (/(?:references|scripts|assets)\/[a-z0-9._/-]+/i.test(content)) {
+    fail(`${skill.id}: Figma edition references an unavailable bundled resource`);
+  }
+
+  const files = await walk(directory);
+  if (files.length !== 1 || files[0] !== entrypoint) {
+    fail(`${skill.id}: Figma edition must contain only one standalone SKILL.md file`);
+  }
+
+  const linkPattern = /\[[^\]]*\]\(([^)]+)\)/g;
+  for (const match of content.matchAll(linkPattern)) {
+    const target = match[1].split("#", 1)[0];
+    if (target && !/^(?:https?:|mailto:)/.test(target)) {
+      fail(`${skill.id}: Figma edition cannot reference bundled files: ${target}`);
+    }
+  }
+}
+
 const catalogue = await readJson("catalog/marketplace.json");
 await readJson("catalog/schemas/marketplace.schema.json");
 await readJson("catalog/schemas/collection.schema.json");
@@ -113,6 +157,7 @@ const catalogueCategories = Array.isArray(catalogue.categories) ? catalogue.cate
 const catalogueTags = Array.isArray(catalogue.tags) ? catalogue.tags : [];
 const catalogueSkills = Array.isArray(catalogue.skills) ? catalogue.skills : [];
 const catalogueCollections = Array.isArray(catalogue.collections) ? catalogue.collections : [];
+const readme = await readFile(path.join(root, "README.md"), "utf8");
 
 const discoveredSkills = (await readdir(path.join(root, "skills"), { withFileTypes: true }))
   .filter((entry) => entry.isDirectory())
@@ -148,6 +193,41 @@ for (const skill of catalogueSkills) {
   if (!unique(installHarnesses)) fail(`${skill.id}: duplicate install evidence`);
   const runtimeEvidence = skill.compatibility?.runtimeTested ?? [];
   if (!unique(runtimeEvidence)) fail(`${skill.id}: duplicate runtime evidence`);
+
+  const editions = skill.editions ?? [];
+  const editionIds = editions.map((edition) => edition.id);
+  if (!unique(editionIds)) fail(`${skill.id}: duplicate edition ids`);
+  const agentEdition = editions.find((edition) => edition.id === "agent-skills");
+  if (!agentEdition) {
+    fail(`${skill.id}: missing canonical Agent Skills edition`);
+  } else {
+    if (agentEdition.path !== skill.path) fail(`${skill.id}: Agent Skills edition path mismatch`);
+    if (!sameMembers(agentEdition.targets ?? [], ["claude-code", "codex", "cursor"])) {
+      fail(`${skill.id}: Agent Skills edition targets must match tested harnesses`);
+    }
+  }
+  const figmaEdition = editions.find((edition) => edition.id === "figma");
+  if (figmaEdition) await validateFigmaEdition(skill, figmaEdition);
+
+  const sectionMatch = readme.match(
+    new RegExp("### `" + skill.id + "`\\n([\\s\\S]*?)(?=\\n### `|\\n## )")
+  );
+  if (!sectionMatch) {
+    fail(`${skill.id}: missing README section`);
+  } else {
+    const section = sectionMatch[1];
+    if (!section.includes("assets/badges/agent-skills.svg")) {
+      fail(`${skill.id}: README section is missing the Agent Skills badge`);
+    }
+    const hasFigmaAgentBadge = section.includes("assets/badges/figma-agent.svg");
+    const hasFigmaMakeBadge = section.includes("assets/badges/figma-make.svg");
+    if (figmaEdition && (!hasFigmaAgentBadge || !hasFigmaMakeBadge)) {
+      fail(`${skill.id}: README section is missing Figma availability badges`);
+    }
+    if (!figmaEdition && (hasFigmaAgentBadge || hasFigmaMakeBadge)) {
+      fail(`${skill.id}: README advertises an undeclared Figma edition`);
+    }
+  }
   await validateSkill(skill);
 
   for (const adapter of skill.compatibility?.adapters ?? []) {
@@ -166,6 +246,18 @@ for (const skill of catalogueSkills) {
       fail(`${skill.id}: OpenAI adapter default prompt must mention $${skill.id}`);
     }
   }
+}
+
+const expectedFigmaEditions = catalogueSkills
+  .filter((skill) => skill.editions?.some((edition) => edition.id === "figma"))
+  .map((skill) => skill.id);
+const discoveredFigmaEditions = (
+  await readdir(path.join(root, "figma-skills"), { withFileTypes: true })
+)
+  .filter((entry) => entry.isDirectory())
+  .map((entry) => entry.name);
+if (!sameMembers(discoveredFigmaEditions, expectedFigmaEditions)) {
+  fail("figma-skills/: directories must match declared Figma editions");
 }
 
 const expectedOpenAiOverlays = catalogueSkills
@@ -205,5 +297,5 @@ if (errors.length) {
 }
 
 console.log(
-  `Validated ${declaredSkills.length} canonical skills and ${catalogueCollections.length} collections.`
+  `Validated ${declaredSkills.length} canonical skills, ${expectedFigmaEditions.length} standalone Figma editions, and ${catalogueCollections.length} collections.`
 );

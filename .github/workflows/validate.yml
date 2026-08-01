@@ -20,13 +20,16 @@ jobs:
         run: npm run validate
       - name: Validate JSON Schemas
         run: |
-          pipx run --spec 'check-jsonschema==0.37.4' check-jsonschema --schemafile catalog/schemas/marketplace.schema.json catalog/marketplace.json
+          pipx run --spec 'check-jsonschema==0.36.2' check-jsonschema --schemafile catalog/schemas/marketplace.schema.json catalog/marketplace.json
           for manifest in collections/*.json; do
-            pipx run --spec 'check-jsonschema==0.37.4' check-jsonschema --schemafile catalog/schemas/collection.schema.json "$manifest"
+            pipx run --spec 'check-jsonschema==0.36.2' check-jsonschema --schemafile catalog/schemas/collection.schema.json "$manifest"
           done
       - name: Validate Agent Skills
         run: |
           for skill in skills/*; do
+            pipx run --spec 'git+https://github.com/agentskills/agentskills.git@38a2ff82958afee88dadf4831509e6f7e9d8ef4e#subdirectory=skills-ref' skills-ref validate "$skill"
+          done
+          for skill in figma-skills/*; do
             pipx run --spec 'git+https://github.com/agentskills/agentskills.git@38a2ff82958afee88dadf4831509e6f7e9d8ef4e#subdirectory=skills-ref' skills-ref validate "$skill"
           done
       - name: Smoke-test multi-harness installation
