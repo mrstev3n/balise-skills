@@ -1,0 +1,4 @@
+interface:
+  display_name: "Balise — États d’interface"
+  short_description: "Complete and verify relevant interface states"
+  default_prompt: "Use $balise-ui-states to complete the relevant states and recovery paths for this interface."
