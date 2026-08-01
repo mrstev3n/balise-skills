@@ -1,63 +1,70 @@
-# Verification evidence
+# Preuves de vérification
 
-Date: 2026-08-01
+Date : 2026-08-01
 
-## Repository invariants
+## Invariants du dépôt
 
-Command:
+Commande :
 
 ```bash
 npm run validate
 ```
 
-Result: seven canonical skills and three collections discovered; frontmatter, paths, links, catalogue, adapters, and collection invariants passed.
+Résultat : neuf skills canoniques, quatre éditions Figma autonomes et trois collections découverts. Le frontmatter, les chemins, les liens, les badges, le catalogue, les éditions, les adaptateurs et les collections respectent les invariants du dépôt.
 
-## JSON Schema
+## Schémas JSON
 
-Tool: `check-jsonschema==0.37.4`
+Outil : `check-jsonschema==0.36.2`
 
-Result: `catalog/marketplace.json` and all three collection manifests passed their Draft 2020-12 schemas.
+Résultat : `catalog/marketplace.json` et les trois manifestes de collection respectent leurs schémas Draft 2020-12.
 
-## Agent Skills reference validator
+## Validateur de référence Agent Skills
 
-Tool source: `agentskills/agentskills`, commit `38a2ff82958afee88dadf4831509e6f7e9d8ef4e`.
+Source : `agentskills/agentskills`, commit `38a2ff82958afee88dadf4831509e6f7e9d8ef4e`.
 
-Result:
+Les neuf éditions canoniques et les quatre éditions Figma ont passé le validateur :
 
 ```text
-Valid skill: skills/balise-ohada
-Valid skill: skills/balise-web-legal
-Valid skill: skills/balise-ux-writing
-Valid skill: skills/balise-content-test
-Valid skill: skills/balise-affinity
-Valid skill: skills/balise-affinity-mcp
-Valid skill: skills/balise-brand-naming
+skills/balise-affinity
+skills/balise-affinity-mcp
+skills/balise-brand-naming
+skills/balise-content-test
+skills/balise-ohada
+skills/balise-ui-states
+skills/balise-ux-writing
+skills/balise-visual-references
+skills/balise-web-legal
+figma-skills/balise-content-test
+figma-skills/balise-ui-states
+figma-skills/balise-ux-writing
+figma-skills/balise-visual-references
 ```
 
-## Multi-harness installation
+## Installation multi-harness
 
-Command shape:
+Commande :
 
 ```bash
 npx --yes skills@1.5.9 add <local-repository> \
   --agent claude-code codex cursor \
   --skill balise-affinity balise-affinity-mcp balise-brand-naming \
-          balise-content-test balise-ohada balise-ux-writing balise-web-legal \
+          balise-content-test balise-ohada balise-ui-states \
+          balise-ux-writing balise-visual-references balise-web-legal \
   --copy --yes
 ```
 
-Result: the CLI found exactly seven skills and installed all of them into isolated Claude Code, Codex, and Cursor project locations. Recursive comparisons against the canonical source returned no differences.
+Résultat : le CLI a découvert exactement neuf skills et les a installés dans des destinations isolées pour Claude Code, Codex et Cursor. Les comparaisons récursives avec les sources canoniques n’ont révélé aucune différence.
 
-This proves format and installation compatibility.
+## Invocation observée
 
-## Runtime invocation
+Codex CLI `0.145.0` a précédemment découvert et invoqué les sept skills suivants depuis une installation isolée :
 
-Codex CLI `0.145.0` was run in ephemeral, read-only mode against the isolated installation.
+- `balise-ohada`
+- `balise-web-legal`
+- `balise-ux-writing`
+- `balise-content-test`
+- `balise-affinity`
+- `balise-affinity-mcp`
+- `balise-brand-naming`
 
-- `balise-ohada` was explicitly invoked, read its installed `SKILL.md`, and returned `SKILL_OK references/jurisdiction-router.md`.
-- `balise-web-legal` was explicitly invoked, read its installed `SKILL.md`, and returned `SKILL_OK references/applicability-router.md`.
-- `balise-ux-writing` returned `SKILL_OK references/interface-patterns.md`.
-- `balise-content-test` returned `SKILL_OK references/test-library.md`.
-- `balise-affinity` returned `SKILL_OK references/affinity-mental-model.md`.
-- `balise-affinity-mcp` returned `SKILL_OK references/affinity-js-patterns.md`.
-- `balise-brand-naming` returned `SKILL_OK references/fondations-de-marque.md`.
+Le catalogue enregistre les preuves d’exécution par skill sans les déduire de la seule validation du format ou de l’installation.

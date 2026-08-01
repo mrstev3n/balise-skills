@@ -1,6 +1,6 @@
-# Compatibility policy
+# Politique de compatibilité
 
-Balise Skills uses the open Agent Skills directory format as its portability boundary:
+Balise Skills utilise le format ouvert Agent Skills comme frontière de portabilité :
 
 ```text
 skill-name/
@@ -10,23 +10,25 @@ skill-name/
 └── assets/
 ```
 
-Only `SKILL.md` is required. Canonical instructions must use relative paths and must not rely on harness-specific invocation syntax, environment variables, hooks, or hidden skills.
+Seul `SKILL.md` est obligatoire. Les instructions canoniques utilisent des chemins relatifs et ne dépendent pas d’une syntaxe d’invocation, de variables d’environnement, de hooks ou de skills cachés propres à un harness.
 
-## Evidence levels
+## Niveaux de preuve
 
-- `format-valid`: the skill passes the repository validator and the Agent Skills reference validator.
-- `install-tested`: the repository has been discovered and installed into an isolated target for the named harness.
-- `runtime-tested`: the installed skill has been discovered and invoked in the named harness.
+- `format-valid` : le skill passe le validateur du dépôt et le validateur de référence Agent Skills.
+- `install-tested` : le dépôt a été découvert et installé dans une destination isolée pour le harness indiqué.
+- `runtime-tested` : le skill installé a été découvert et invoqué dans le harness indiqué.
 
-The catalogue records `runtime-tested` claims only when backed by an observed invocation.
+Le catalogue n’enregistre une preuve d’exécution que lorsqu’une invocation a été observée. Les tests d’installation utilisent des destinations isolées et comparent les répertoires installés à leurs sources canoniques. Consultez les [preuves de vérification](verification.md).
 
-Installation tests use isolated destinations and compare the installed directories with their canonical sources. See [verification evidence](verification.md).
+## Stratégie multi-harness
 
-Runtime evidence is recorded per skill and per tested harness version in the catalogue.
+- Claude Code consomme le skill canonique. Un éventuel paquet plugin reste isolé dans un adaptateur dédié.
+- Codex/OpenAI consomme le skill canonique et peut recevoir les métadonnées facultatives `agents/openai.yaml` de son adaptateur.
+- Cursor consomme le skill canonique sans adaptateur tant qu’aucune exigence propre à Cursor n’est établie.
+- Les autres harness compatibles reçoivent le même répertoire canonique au moyen d’un installateur Agent Skills.
 
-## Harness strategy
+## Éditions Figma
 
-- Claude Code consumes the canonical skill. Plugin packaging, if added, belongs in a Claude-specific adapter.
-- Codex/OpenAI consumes the canonical skill and may receive optional `agents/openai.yaml` metadata through the isolated adapter.
-- Cursor consumes the canonical skill without an adapter unless a verified Cursor-only requirement appears.
-- Other compatible harnesses receive the same canonical directory through an Agent Skills installer.
+Les éditions destinées au Figma Agent et à Figma Make vivent sous `figma-skills/`. Chacune contient un unique fichier `SKILL.md`, sans `references/`, `scripts/` ni `assets/` associés.
+
+Ces éditions conservent le même identifiant Balise, mais leur workflow peut être adapté aux capacités de Figma. Elles ne sont proposées que lorsque l’usage reste autonome et pertinent dans cet environnement.

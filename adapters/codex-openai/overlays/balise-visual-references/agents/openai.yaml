@@ -1,0 +1,4 @@
+interface:
+  display_name: "Balise — Visual References"
+  short_description: "Find and translate visual references into design principles"
+  default_prompt: "Use $balise-visual-references to build a focused visual-reference set for this design problem."
