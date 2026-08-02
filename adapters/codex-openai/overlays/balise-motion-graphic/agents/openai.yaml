@@ -1,0 +1,4 @@
+interface:
+  display_name: "Balise — Motion graphic"
+  short_description: "Direct and produce contemporary motion graphics"
+  default_prompt: "Use $balise-motion-graphic to choose a strong direction and produce a validated motion graphics prototype or render."

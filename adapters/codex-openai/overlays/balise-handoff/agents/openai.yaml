@@ -1,0 +1,4 @@
+interface:
+  display_name: "Balise — Handoff"
+  short_description: "Audit implementation readiness from design evidence"
+  default_prompt: "Use $balise-handoff to audit this design for implementation readiness and produce an evidence-based handoff contract."

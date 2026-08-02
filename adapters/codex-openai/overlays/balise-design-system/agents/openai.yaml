@@ -1,0 +1,4 @@
+interface:
+  display_name: "Balise — Design system"
+  short_description: "Architecturer des systèmes de design robustes"
+  default_prompt: "Utilise $balise-design-system pour structurer ce produit de Figma au code avec des fondations, tokens et composants robustes."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Balise — Parcours de confiance"
+  short_description: "Audit and repair consequential product choices"
+  default_prompt: "Use $balise-trustworthy-flows to audit this flow, explain decision risks, and propose a safer alternative."

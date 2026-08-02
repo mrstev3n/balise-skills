@@ -1,0 +1,13 @@
+{
+  "$schema": "../catalog/schemas/collection.schema.json",
+  "schemaVersion": "1.0",
+  "id": "motion",
+  "name": "Motion",
+  "description": "Interactive web motion and rendered motion graphics workflows.",
+  "version": "0.1.0",
+  "updatedAt": "2026-08-02",
+  "skills": [
+    "balise-webmotion",
+    "balise-motion-graphic"
+  ]
+}
