@@ -1,4 +1,4 @@
 interface:
   display_name: "Balise — Conformité juridique web"
-  short_description: "Conformité web Afrique francophone et RGPD"
-  default_prompt: "Utilise $balise-web-legal pour déterminer les juridictions applicables, puis auditer ce site et préparer ses documents juridiques sans négliger les droits d'Afrique francophone ni le RGPD."
+  short_description: "Préparation juridique web multi-juridiction"
+  default_prompt: "Utilise $balise-web-legal. Commence obligatoirement par son questionnaire de cadrage sans auditer ni rédiger, sauf si je t'autorise explicitement à le remplir avec les informations déjà connues. Détermine ensuite les juridictions applicables et prépare l'audit ou les documents sans présenter le résultat comme une certification de conformité."

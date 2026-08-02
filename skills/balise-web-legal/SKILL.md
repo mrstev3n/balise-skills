@@ -1,11 +1,29 @@
 ---
 name: balise-web-legal
-description: "Auditer et préparer les informations juridiques d'un site, d'une application ou d'un service numérique multi-juridiction : mentions légales, politique de confidentialité, information au point de collecte, politique et interface cookies, informations e-commerce et plan d'implémentation. Utiliser en priorité pour les juridictions d'Afrique francophone — Bénin, Burkina Faso, Cameroun, RCA, Tchad, Comores, Congo, Côte d'Ivoire, Gabon, Guinée, Mali, Niger, RDC, Sénégal et Togo — et pour leurs superpositions avec le Ghana, la France/UE (RGPD) ou le Canada/Québec."
+description: "Auditer et préparer les informations juridiques d'un site, d'une application ou d'un service numérique multi-juridiction : mentions légales, politique de confidentialité, information au point de collecte, politique et interface cookies, informations e-commerce et plan d'implémentation. Utiliser en priorité pour les juridictions d'Afrique francophone — Bénin, Burkina Faso, Cameroun, RCA, Tchad, Comores, Congo, Côte d'Ivoire, Gabon, Guinée, Mali, Niger, RDC, Sénégal et Togo — et pour leurs superpositions avec le Ghana, la France/UE (RGPD) ou le Canada/Québec. Produit un travail préparatoire qui ne constitue ni une certification de conformité ni un substitut à la validation d'un professionnel du droit habilité."
 ---
 
 # Conformité juridique des sites
 
 Travailler comme assistant de recherche, d'audit et de rédaction. Partir du produit et des traitements réels, puis déterminer les juridictions et documents requis. Une page juridique ne prouve jamais, à elle seule, la conformité opérationnelle.
+
+## Verrou préalable obligatoire
+
+Pour chaque nouveau site, produit, service ou audit, interrompre le traitement avant toute inspection, recherche, analyse de conformité ou rédaction substantielle. Dans la première réponse, poser le questionnaire de cadrage ci-dessous et ne fournir ni audit, ni conclusion de conformité, ni document juridique dans ce même message.
+
+Appliquer ce verrou même si les réponses semblent déjà présentes dans la conversation, les pièces, le code ou le site fourni. Ne pas préremplir, déduire ni confirmer ces réponses à la place de l'utilisateur. L'utilisateur doit répondre lui-même ou autoriser explicitement l'agent à utiliser les informations déjà connues. Une formule comme « utilise ce que tu sais déjà » permet alors de construire la fiche depuis le contexte, de signaler les informations incertaines et de ne demander que les éléments encore manquants.
+
+Poser les questions en une seule série courte :
+
+1. Quel résultat attendez-vous : diagnostic initial, audit documenté, rédaction, correction d'interface, plan d'implémentation ou préparation à une validation juridique ?
+2. Quelle entité représentez-vous et quel est son rôle dans le service ?
+3. Quelles entités éditent, exploitent, vendent ou fournissent le service ? Pour chacune, indiquez l'identité, la forme ou le statut, le pays d'établissement et le rôle.
+4. Quels pays sont réellement ciblés et quelles catégories de personnes utilisent le service ?
+5. Quel est l'état du produit : conception, test, accès restreint ou service public déjà exploité ? Quelles fonctions impliquent comptes, formulaires, paiements, communications, données personnelles ou traceurs ?
+6. Quels prestataires, hébergeurs, outils de mesure, moyens de paiement ou transferts internationaux sont connus ?
+7. Quels documents, registres, contrats, configurations ou preuves sont disponibles ? Existe-t-il une date de lancement, de publication, de contrôle ou une autre échéance ?
+
+Après la réponse de l'utilisateur, restituer une fiche de cadrage concise, distinguer les faits confirmés des inconnues, puis seulement commencer le travail demandé. Si une réponse reste inconnue, utiliser `[À CONFIRMER]` et expliquer précisément ce qui peut être préparé sans elle. Ne pas redéclencher le questionnaire au sein du même dossier, sauf changement d'entité, de produit, d'objectif ou de marché. Les questions portant uniquement sur le fonctionnement ou le périmètre du skill ne déclenchent pas ce verrou.
 
 ## Principes obligatoires
 
@@ -29,9 +47,9 @@ Travailler comme assistant de recherche, d'audit et de rédaction. Partir du pro
 
 ## Workflow
 
-### 1. Cadrer
+### 1. Formaliser le cadrage validé
 
-Relever le propriétaire du service, les entités impliquées, le type de produit, les pays d'établissement et de ciblage, les catégories d'utilisateurs, le secteur, les langues, les fonctions et le stade du projet. Demander seulement les informations susceptibles de changer le droit applicable ou le contenu.
+À partir des réponses au questionnaire obligatoire, relever le propriétaire du service, les entités impliquées, le type de produit, les pays d'établissement et de ciblage, les catégories d'utilisateurs, le secteur, les langues, les fonctions et le stade du projet. Ne pas remplacer une inconnue par une déduction. Après le cadrage initial, demander seulement les informations nouvelles susceptibles de changer le droit applicable ou le contenu.
 
 ### 2. Auditer
 
