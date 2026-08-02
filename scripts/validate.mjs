@@ -11,8 +11,16 @@ const fail = (message) => errors.push(message);
 const readJson = async (relativePath) =>
   JSON.parse(await readFile(path.join(root, relativePath), "utf8"));
 const unique = (values) => new Set(values).size === values.length;
+const semver = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$/;
+const isoDate = /^\d{4}-\d{2}-\d{2}$/;
 const sameMembers = (left, right) =>
   left.length === right.length && [...left].sort().join("\n") === [...right].sort().join("\n");
+
+function validDate(value) {
+  if (!isoDate.test(value ?? "")) return false;
+  const date = new Date(`${value}T00:00:00Z`);
+  return !Number.isNaN(date.valueOf()) && date.toISOString().slice(0, 10) === value;
+}
 
 async function walk(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -149,6 +157,8 @@ await readJson("catalog/schemas/collection.schema.json");
 
 if (catalogue.schemaVersion !== "1.0") fail("catalogue: unsupported schemaVersion");
 if (catalogue.marketplace?.id !== "balise") fail("catalogue: invalid marketplace id");
+if (!semver.test(catalogue.marketplace?.release ?? "")) fail("catalogue: invalid release");
+if (!validDate(catalogue.marketplace?.updatedAt)) fail("catalogue: invalid updatedAt date");
 for (const field of ["categories", "tags", "skills", "collections"]) {
   if (!Array.isArray(catalogue[field])) fail(`catalogue: ${field} must be an array`);
 }
@@ -179,6 +189,8 @@ if (!unique(collectionIds)) fail("catalogue: duplicate collection ids");
 const categories = new Map(catalogueCategories.map((category) => [category.id, category]));
 const tags = new Set(tagIds);
 for (const skill of catalogueSkills) {
+  if (!semver.test(skill.version ?? "")) fail(`${skill.id}: invalid version`);
+  if (!validDate(skill.updatedAt)) fail(`${skill.id}: invalid updatedAt date`);
   if (skill.path !== `skills/${skill.id}`) fail(`${skill.id}: catalogue path mismatch`);
   if (!categories.has(skill.category)) fail(`${skill.id}: unknown category ${skill.category}`);
   if (categories.get(skill.category)?.status !== "active") {
@@ -284,6 +296,8 @@ for (const entry of catalogueCollections) {
   const collection = await readJson(entry.manifest);
   if (collection.schemaVersion !== "1.0") fail(`${entry.id}: unsupported collection schemaVersion`);
   if (collection.id !== entry.id) fail(`${entry.id}: collection id mismatch`);
+  if (!semver.test(collection.version ?? "")) fail(`${entry.id}: invalid collection version`);
+  if (!validDate(collection.updatedAt)) fail(`${entry.id}: invalid updatedAt date`);
   if (!unique(collection.skills)) fail(`${entry.id}: duplicate skill ids`);
   for (const skillId of collection.skills) {
     if (!declaredSkills.includes(skillId)) fail(`${entry.id}: unknown skill ${skillId}`);

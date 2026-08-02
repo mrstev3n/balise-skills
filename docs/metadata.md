@@ -27,4 +27,16 @@ Une édition Figma est déclarée uniquement lorsque le workflow peut fonctionne
 
 ## Versionnement
 
-Le catalogue, les collections et les skills suivent le versionnement sémantique.
+Le catalogue, les collections et les skills suivent le versionnement sémantique. Le champ `updatedAt`, au format `AAAA-MM-JJ`, indique la date de publication de la version déclarée.
+
+Toutes les éditions d’un même skill partagent une seule version. Une modification de l’édition canonique, de l’édition Figma ou d’un adaptateur impose donc d’incrémenter `version` et d’actualiser `updatedAt` dans `catalog/marketplace.json`.
+
+Une collection change de version lorsque sa composition ou son contrat évolue. Sa date correspond à la publication de cette version du manifeste.
+
+Le README reprend automatiquement les versions et dates des skills depuis le catalogue :
+
+```bash
+npm run sync:readme
+```
+
+La validation refuse un README désynchronisé et détecte les modifications de contenu qui ne sont pas accompagnées d’une nouvelle version.

@@ -5,7 +5,8 @@
     "id": "balise",
     "name": "Balise Skills",
     "description": "Un catalogue francophone et multidomaine de skills portables.",
-    "release": "0.6.0"
+    "release": "0.7.0",
+    "updatedAt": "2026-08-02"
   },
   "categories": [
     {
@@ -85,6 +86,7 @@
     {
       "id": "balise-ohada",
       "version": "0.2.0",
+      "updatedAt": "2026-07-31",
       "path": "skills/balise-ohada",
       "summary": "Research and drafting workflows for OHADA business law and the national law of fifteen francophone member states.",
       "category": "legal",
@@ -129,6 +131,7 @@
     {
       "id": "balise-web-legal",
       "version": "0.2.0",
+      "updatedAt": "2026-07-31",
       "path": "skills/balise-web-legal",
       "summary": "Audit and drafting workflows for legal notices, privacy, cookies, and e-commerce, centered on francophone Africa with GDPR coverage when applicable.",
       "category": "legal",
@@ -175,6 +178,7 @@
     {
       "id": "balise-ux-writing",
       "version": "0.1.0",
+      "updatedAt": "2026-08-01",
       "path": "skills/balise-ux-writing",
       "summary": "Review, creation, harmonization, and implementation workflows for accessible, localized, user-centered interface copy.",
       "category": "content",
@@ -206,6 +210,7 @@
     {
       "id": "balise-content-test",
       "version": "0.1.0",
+      "updatedAt": "2026-08-01",
       "path": "skills/balise-content-test",
       "summary": "Content resilience testing workflows for localization, accessibility, extreme data, responsive layouts, and interface behavior.",
       "category": "content",
@@ -237,6 +242,7 @@
     {
       "id": "balise-affinity",
       "version": "0.1.0",
+      "updatedAt": "2026-08-01",
       "path": "skills/balise-affinity",
       "summary": "Design reasoning, audit, document strategy, and non-destructive production workflows for Affinity by Canva.",
       "category": "design",
@@ -263,6 +269,7 @@
     {
       "id": "balise-affinity-mcp",
       "version": "0.1.0",
+      "updatedAt": "2026-08-01",
       "path": "skills/balise-affinity-mcp",
       "summary": "Live Affinity automation workflows using the Affinity MCP and JavaScript SDK, with inspection and visual verification.",
       "category": "design",
@@ -289,6 +296,7 @@
     {
       "id": "balise-brand-naming",
       "version": "0.1.0",
+      "updatedAt": "2026-08-01",
       "path": "skills/balise-brand-naming",
       "summary": "Brand foundations, naming exploration, candidate evaluation, availability screening, and early identity direction workflows.",
       "category": "design",
@@ -315,6 +323,7 @@
     {
       "id": "balise-ui-states",
       "version": "0.1.0",
+      "updatedAt": "2026-08-01",
       "path": "skills/balise-ui-states",
       "summary": "Audit, design, implementation, and verification workflows for complete, recoverable interface states and transitions.",
       "category": "design",
@@ -346,6 +355,7 @@
     {
       "id": "balise-visual-references",
       "version": "0.1.0",
+      "updatedAt": "2026-08-01",
       "path": "skills/balise-visual-references",
       "summary": "Guided visual-reference research, source selection, capture, and synthesis workflows for design decisions.",
       "category": "design",
@@ -377,6 +387,7 @@
     {
       "id": "balise-trustworthy-flows",
       "version": "0.1.0",
+      "updatedAt": "2026-08-02",
       "path": "skills/balise-trustworthy-flows",
       "summary": "Audit, design, repair, and verification workflows for trustworthy consent, permissions, pricing, subscriptions, cancellation, destructive actions, and data sharing.",
       "category": "design",
@@ -408,6 +419,7 @@
     {
       "id": "balise-handoff",
       "version": "0.1.0",
+      "updatedAt": "2026-08-02",
       "path": "skills/balise-handoff",
       "summary": "Evidence-based readiness audits and handoff preparation for designs, specifications, prototypes, design systems, and implemented interfaces.",
       "category": "design",
@@ -439,6 +451,7 @@
     {
       "id": "balise-design-system",
       "version": "0.1.0",
+      "updatedAt": "2026-08-02",
       "path": "skills/balise-design-system",
       "summary": "Architecture, audit, delivery, adoption, and governance workflows for design systems spanning Figma, tokens, code, documentation, and multi-platform distribution.",
       "category": "design",
@@ -465,6 +478,7 @@
     {
       "id": "balise-webmotion",
       "version": "0.1.0",
+      "updatedAt": "2026-08-02",
       "path": "skills/balise-webmotion",
       "summary": "Research, direction, asset selection, implementation, and verification workflows for high-end interactive web motion and prototypes.",
       "category": "design",
@@ -491,6 +505,7 @@
     {
       "id": "balise-motion-graphic",
       "version": "0.1.0",
+      "updatedAt": "2026-08-02",
       "path": "skills/balise-motion-graphic",
       "summary": "Direction, asset strategy, prototyping, rendering, and export validation workflows for contemporary motion graphics and video sequences.",
       "category": "design",
