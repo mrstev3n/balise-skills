@@ -170,6 +170,26 @@ Une méthode complète pour architecturer, auditer et faire évoluer un design s
 npx skills add mrstev3n/balise-skills --skill balise-design-system
 ```
 
+### `balise-webmotion`
+
+[![Agent Skills](assets/badges/agent-skills.svg)](skills/balise-webmotion)
+
+Un workflow de recherche, de direction et de production pour créer des mouvements web ambitieux : transitions de page, narration au scroll, micro-interactions, gestes, effets 3D, animations vectorielles et prototypes rapides. Le skill choisit une approche adaptée au projet, construit le moment signature, puis vérifie les performances, les interactions et la réduction des mouvements.
+
+```bash
+npx skills add mrstev3n/balise-skills --skill balise-webmotion
+```
+
+### `balise-motion-graphic`
+
+[![Agent Skills](assets/badges/agent-skills.svg)](skills/balise-motion-graphic)
+
+Un workflow de direction et de production pour les contenus animés rendus : teasers, vidéos sociales, génériques, kinetic typography, explainers, boucles et animations de marque. Il couvre le brief, les références, les assets, le rythme, le son, le choix du moteur, le rendu et la validation du fichier exporté.
+
+```bash
+npx skills add mrstev3n/balise-skills --skill balise-motion-graphic
+```
+
 ## Utiliser une édition Figma
 
 Lorsqu’un skill affiche les badges Figma, ouvrez le fichier `SKILL.md` lié, téléchargez-le, puis ajoutez-le depuis **Skills → Add skill** dans le Figma Agent ou Figma Make. L’édition Figma est autonome et peut adapter son workflow aux capacités de cet environnement.
@@ -205,9 +225,19 @@ npx skills add mrstev3n/balise-skills \
   --skill balise-brand-naming \
   --skill balise-design-system \
   --skill balise-handoff \
+  --skill balise-motion-graphic \
   --skill balise-trustworthy-flows \
   --skill balise-ui-states \
-  --skill balise-visual-references
+  --skill balise-visual-references \
+  --skill balise-webmotion
+```
+
+### Collection `motion`
+
+```bash
+npx skills add mrstev3n/balise-skills \
+  --skill balise-webmotion \
+  --skill balise-motion-graphic
 ```
 
 ## Catalogue
@@ -218,7 +248,7 @@ Balise Skills propose trois niveaux de découverte :
 - Les **tags** relient les skills selon leurs sujets et leurs usages.
 - Les **collections** réunissent plusieurs skills dans un ensemble installable.
 
-Les collections `legal`, `content` et `design` composent un catalogue conçu pour couvrir plusieurs domaines.
+Les collections `legal`, `content`, `design` et `motion` composent un catalogue conçu pour couvrir plusieurs domaines.
 
 Les métadonnées exploitables par des outils se trouvent dans [`catalog/marketplace.json`](catalog/marketplace.json). Consultez le [modèle de métadonnées](docs/metadata.md) et la [politique de compatibilité](docs/compatibility.md) pour en savoir plus.
 
