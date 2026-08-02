@@ -1,0 +1,4 @@
+interface:
+  display_name: "Balise — Webmotion"
+  short_description: "Research and build high-end interactive web motion"
+  default_prompt: "Use $balise-webmotion to choose a strong motion direction and build the first working web prototype."
