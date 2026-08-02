@@ -140,6 +140,36 @@ Une méthode de recherche et de sélection de références visuelles pour une in
 npx skills add mrstev3n/balise-skills --skill balise-visual-references
 ```
 
+### `balise-trustworthy-flows`
+
+[![Agent Skills](assets/badges/agent-skills.svg)](skills/balise-trustworthy-flows) [![Figma Agent](assets/badges/figma-agent.svg)](figma-skills/balise-trustworthy-flows/SKILL.md) [![Figma Make](assets/badges/figma-make.svg)](figma-skills/balise-trustworthy-flows/SKILL.md)
+
+Un workflow pour auditer, concevoir et réparer les parcours où une décision engage réellement la personne : consentement, permissions, tarification, abonnement, résiliation, suppression ou partage de données. Il aide à rendre les conséquences lisibles, les choix équilibrés et les sorties accessibles, sans prétendre déduire l’intention du produit ni sa conformité juridique depuis une interface.
+
+```bash
+npx skills add mrstev3n/balise-skills --skill balise-trustworthy-flows
+```
+
+### `balise-handoff`
+
+[![Agent Skills](assets/badges/agent-skills.svg)](skills/balise-handoff) [![Figma Agent](assets/badges/figma-agent.svg)](figma-skills/balise-handoff/SKILL.md) [![Figma Make](assets/badges/figma-make.svg)](figma-skills/balise-handoff/SKILL.md)
+
+Un cadre pour déterminer si une conception est réellement prête à être implémentée. Il relie les maquettes, composants, prototypes, spécifications et preuves techniques, puis rend explicites les décisions ouvertes, leurs responsables, les risques et les critères d’acceptation.
+
+```bash
+npx skills add mrstev3n/balise-skills --skill balise-handoff
+```
+
+### `balise-design-system`
+
+[![Agent Skills](assets/badges/agent-skills.svg)](skills/balise-design-system)
+
+Une méthode complète pour architecturer, auditer et faire évoluer un design system de Figma au code : fondations, variables, tokens sémantiques, composants, thèmes, DTCG, Style Dictionary, documentation, distribution et gouvernance. Le skill aide aussi à organiser l’adoption, les migrations et les architectures multi-marques ou multi-plateformes.
+
+```bash
+npx skills add mrstev3n/balise-skills --skill balise-design-system
+```
+
 ## Utiliser une édition Figma
 
 Lorsqu’un skill affiche les badges Figma, ouvrez le fichier `SKILL.md` lié, téléchargez-le, puis ajoutez-le depuis **Skills → Add skill** dans le Figma Agent ou Figma Make. L’édition Figma est autonome et peut adapter son workflow aux capacités de cet environnement.
@@ -173,6 +203,9 @@ npx skills add mrstev3n/balise-skills \
   --skill balise-affinity \
   --skill balise-affinity-mcp \
   --skill balise-brand-naming \
+  --skill balise-design-system \
+  --skill balise-handoff \
+  --skill balise-trustworthy-flows \
   --skill balise-ui-states \
   --skill balise-visual-references
 ```

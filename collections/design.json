@@ -3,12 +3,15 @@
   "schemaVersion": "1.0",
   "id": "design",
   "name": "Design",
-  "description": "Design reasoning, visual research, interface states, Affinity automation, and brand naming workflows.",
-  "version": "0.2.0",
+  "description": "Design reasoning, systems, trustworthy flows, handoff, visual research, interface states, Affinity automation, and brand naming workflows.",
+  "version": "0.3.0",
   "skills": [
     "balise-affinity",
     "balise-affinity-mcp",
     "balise-brand-naming",
+    "balise-design-system",
+    "balise-handoff",
+    "balise-trustworthy-flows",
     "balise-ui-states",
     "balise-visual-references"
   ]

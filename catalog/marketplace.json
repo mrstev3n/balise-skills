@@ -5,7 +5,7 @@
     "id": "balise",
     "name": "Balise Skills",
     "description": "Un catalogue francophone et multidomaine de skills portables.",
-    "release": "0.4.0"
+    "release": "0.5.0"
   },
   "categories": [
     {
@@ -47,10 +47,17 @@
     { "id": "business-law", "label": "Business law" },
     { "id": "content-design", "label": "Content design" },
     { "id": "content-resilience", "label": "Content resilience" },
+    { "id": "consent", "label": "Consent" },
     { "id": "cookies", "label": "Cookies" },
+    { "id": "deceptive-patterns", "label": "Deceptive patterns" },
+    { "id": "design-systems", "label": "Design systems" },
+    { "id": "design-tokens", "label": "Design tokens" },
+    { "id": "developer-handoff", "label": "Developer handoff" },
     { "id": "ecommerce", "label": "E-commerce" },
+    { "id": "figma-to-code", "label": "Figma to code" },
     { "id": "francophone-africa", "label": "Francophone Africa" },
     { "id": "gdpr", "label": "GDPR" },
+    { "id": "governance", "label": "Governance" },
     { "id": "interface-copy", "label": "Interface copy" },
     { "id": "interface-states", "label": "Interface states" },
     { "id": "jurisdiction-aware", "label": "Jurisdiction-aware" },
@@ -61,6 +68,7 @@
     { "id": "ohada", "label": "OHADA" },
     { "id": "naming", "label": "Naming" },
     { "id": "privacy", "label": "Privacy" },
+    { "id": "product-trust", "label": "Product trust" },
     { "id": "responsive-design", "label": "Responsive design" },
     { "id": "design-research", "label": "Design research" },
     { "id": "ui-testing", "label": "UI testing" },
@@ -357,6 +365,94 @@
           { "harness": "claude-code", "method": "skills@1.5.9 copy", "date": "2026-08-01" },
           { "harness": "codex", "method": "skills@1.5.9 copy", "date": "2026-08-01" },
           { "harness": "cursor", "method": "skills@1.5.9 copy", "date": "2026-08-01" }
+        ],
+        "runtimeTested": []
+      }
+    },
+    {
+      "id": "balise-trustworthy-flows",
+      "version": "0.1.0",
+      "path": "skills/balise-trustworthy-flows",
+      "summary": "Audit, design, repair, and verification workflows for trustworthy consent, permissions, pricing, subscriptions, cancellation, destructive actions, and data sharing.",
+      "category": "design",
+      "tags": ["product-trust", "consent", "deceptive-patterns", "privacy", "accessibility"],
+      "license": "Apache-2.0",
+      "editions": [
+        {
+          "id": "agent-skills",
+          "path": "skills/balise-trustworthy-flows",
+          "targets": ["claude-code", "codex", "cursor"]
+        },
+        {
+          "id": "figma",
+          "path": "figma-skills/balise-trustworthy-flows/SKILL.md",
+          "targets": ["figma-agent", "figma-make"]
+        }
+      ],
+      "compatibility": {
+        "format": "agent-skills",
+        "adapters": ["codex-openai"],
+        "installTested": [
+          { "harness": "claude-code", "method": "skills@1.5.9 copy", "date": "2026-08-02" },
+          { "harness": "codex", "method": "skills@1.5.9 copy", "date": "2026-08-02" },
+          { "harness": "cursor", "method": "skills@1.5.9 copy", "date": "2026-08-02" }
+        ],
+        "runtimeTested": []
+      }
+    },
+    {
+      "id": "balise-handoff",
+      "version": "0.1.0",
+      "path": "skills/balise-handoff",
+      "summary": "Evidence-based readiness audits and handoff preparation for designs, specifications, prototypes, design systems, and implemented interfaces.",
+      "category": "design",
+      "tags": ["developer-handoff", "figma-to-code", "design-systems", "accessibility", "ui-testing"],
+      "license": "Apache-2.0",
+      "editions": [
+        {
+          "id": "agent-skills",
+          "path": "skills/balise-handoff",
+          "targets": ["claude-code", "codex", "cursor"]
+        },
+        {
+          "id": "figma",
+          "path": "figma-skills/balise-handoff/SKILL.md",
+          "targets": ["figma-agent", "figma-make"]
+        }
+      ],
+      "compatibility": {
+        "format": "agent-skills",
+        "adapters": ["codex-openai"],
+        "installTested": [
+          { "harness": "claude-code", "method": "skills@1.5.9 copy", "date": "2026-08-02" },
+          { "harness": "codex", "method": "skills@1.5.9 copy", "date": "2026-08-02" },
+          { "harness": "cursor", "method": "skills@1.5.9 copy", "date": "2026-08-02" }
+        ],
+        "runtimeTested": []
+      }
+    },
+    {
+      "id": "balise-design-system",
+      "version": "0.1.0",
+      "path": "skills/balise-design-system",
+      "summary": "Architecture, audit, delivery, adoption, and governance workflows for design systems spanning Figma, tokens, code, documentation, and multi-platform distribution.",
+      "category": "design",
+      "tags": ["design-systems", "design-tokens", "figma-to-code", "governance", "automation", "visual-design"],
+      "license": "Apache-2.0",
+      "editions": [
+        {
+          "id": "agent-skills",
+          "path": "skills/balise-design-system",
+          "targets": ["claude-code", "codex", "cursor"]
+        }
+      ],
+      "compatibility": {
+        "format": "agent-skills",
+        "adapters": ["codex-openai"],
+        "installTested": [
+          { "harness": "claude-code", "method": "skills@1.5.9 copy", "date": "2026-08-02" },
+          { "harness": "codex", "method": "skills@1.5.9 copy", "date": "2026-08-02" },
+          { "harness": "cursor", "method": "skills@1.5.9 copy", "date": "2026-08-02" }
         ],
         "runtimeTested": []
       }
