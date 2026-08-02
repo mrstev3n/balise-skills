@@ -85,10 +85,10 @@
   "skills": [
     {
       "id": "balise-ohada",
-      "version": "0.2.0",
-      "updatedAt": "2026-07-31",
+      "version": "0.3.0",
+      "updatedAt": "2026-08-02",
       "path": "skills/balise-ohada",
-      "summary": "Research and drafting workflows for OHADA business law and the national law of fifteen francophone member states.",
+      "summary": "Sourced preparatory research and drafting for OHADA and national law, with mandatory matter intake and professional-review boundaries.",
       "category": "legal",
       "tags": [
         "business-law",
@@ -130,10 +130,10 @@
     },
     {
       "id": "balise-web-legal",
-      "version": "0.2.0",
-      "updatedAt": "2026-07-31",
+      "version": "0.3.0",
+      "updatedAt": "2026-08-02",
       "path": "skills/balise-web-legal",
-      "summary": "Audit and drafting workflows for legal notices, privacy, cookies, and e-commerce, centered on francophone Africa with GDPR coverage when applicable.",
+      "summary": "Preparatory website legal audits and drafting, with mandatory product intake, francophone African coverage, and GDPR routing when applicable.",
       "category": "legal",
       "tags": [
         "cookies",

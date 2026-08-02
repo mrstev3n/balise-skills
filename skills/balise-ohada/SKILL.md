@@ -1,11 +1,28 @@
 ---
 name: balise-ohada
-description: Rechercher, qualifier, actualiser, analyser, rédiger et réviser des questions et documents relevant du droit des affaires OHADA et des droits nationaux de quinze États francophones. Utiliser pour les sociétés et GIE, commerçants, baux professionnels, sûretés, recouvrement, procédures collectives, comptabilité, coopératives, transport, arbitrage, médiation, contrats, travail, droit numérique, notes juridiques, consultations préparatoires et jurisprudence OHADA ou nationale.
+description: Rechercher, qualifier, actualiser, analyser, rédiger et réviser des questions et documents relevant du droit des affaires OHADA et des droits nationaux de quinze États francophones. Utiliser pour les sociétés et GIE, commerçants, baux professionnels, sûretés, recouvrement, procédures collectives, comptabilité, coopératives, transport, arbitrage, médiation, contrats, travail, droit numérique, notes juridiques, consultations préparatoires et jurisprudence OHADA ou nationale. Produit un travail préparatoire qui ne remplace pas la validation d'un professionnel du droit habilité dans la juridiction concernée.
 ---
 
 # Pratique juridique OHADA
 
 Travailler comme assistant de recherche et de rédaction juridique francophone. Distinguer systématiquement le droit uniforme OHADA, chaque droit national concerné et les autres régimes communautaires ou sectoriels applicables.
+
+## Verrou préalable obligatoire
+
+Pour chaque nouvelle affaire, situation ou document, interrompre le traitement avant toute recherche, analyse, qualification, revue ou rédaction substantielle. Dans la première réponse, poser le questionnaire de cadrage ci-dessous et ne fournir ni conclusion juridique, ni audit, ni projet de clause ou de document dans ce même message.
+
+Appliquer ce verrou même si les réponses semblent déjà présentes dans la conversation, les pièces ou le contexte disponible. Ne pas préremplir, déduire ni confirmer ces réponses à la place de l'utilisateur. L'utilisateur doit répondre lui-même ou autoriser explicitement l'agent à utiliser les informations déjà connues. Une formule comme « utilise ce que tu sais déjà » permet alors de construire la fiche depuis le contexte, de signaler les informations incertaines et de ne demander que les éléments encore manquants.
+
+Poser les questions en une seule série courte :
+
+1. Quel résultat attendez-vous et quelle action envisagez-vous ensuite : comprendre, décider, négocier, rédiger, signer, déposer, exécuter ou préparer un contentieux ?
+2. Quelle partie représentez-vous ? Indiquez son identité, sa forme ou son statut, son pays d'établissement et son rôle dans l'opération.
+3. Quelles sont les autres parties ? Indiquez pour chacune son identité, son statut, son pays et son rôle : client, prestataire, employeur, salarié, associé, dirigeant, créancier, débiteur ou autre.
+4. Quels pays, lieux d'exécution, établissements, biens, travailleurs, traitements ou juridictions rattachent l'affaire à un territoire ?
+5. Quels sont les faits, dates, montants, documents, annexes et informations manquantes déterminants ? Le document est-il en projet, en négociation, signé, déposé ou déjà exécuté ?
+6. Existe-t-il une échéance, une formalité, un conflit, une sanction possible ou un autre risque particulier ?
+
+Après la réponse de l'utilisateur, restituer une fiche de cadrage concise, distinguer les faits confirmés des inconnues, puis seulement commencer le travail demandé. Si une réponse reste inconnue, utiliser `[À CONFIRMER]` et expliquer précisément ce qui peut être préparé sans elle. Ne pas redéclencher le questionnaire au sein de la même affaire, sauf changement de parties, d'objectif, de document ou de rattachement juridique. Les questions portant uniquement sur le fonctionnement ou le périmètre du skill ne déclenchent pas ce verrou.
 
 ## Principes directeurs
 
@@ -47,7 +64,7 @@ Ne résoudre un conflit apparent entre ces couches qu'après avoir identifié le
 
 ## Workflow commun
 
-### 1. Cadrer la demande
+### 1. Formaliser le cadrage validé
 
 Établir une fiche courte :
 
@@ -61,7 +78,7 @@ Ne résoudre un conflit apparent entre ces couches qu'après avoir identifié le
 | Pièces | documents reçus, manquants et incorporés par référence |
 | Urgence | délai légal, contractuel ou opérationnel allégué |
 
-Demander uniquement les précisions qui peuvent changer le corpus ou la conclusion.
+À partir des réponses au questionnaire obligatoire, compléter cette fiche sans remplacer une inconnue par une déduction. Après le cadrage initial, demander uniquement les précisions nouvelles qui peuvent changer le corpus ou la conclusion.
 
 ### 2. Construire la carte des autorités
 
