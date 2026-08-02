@@ -13,11 +13,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v6
         with:
           node-version: 22
       - name: Validate repository invariants
-        run: npm run validate
+        env:
+          VERSION_BASE_REF: origin/main
+        run: npm test
       - name: Validate JSON Schemas
         run: |
           pipx run --spec 'check-jsonschema==0.36.2' check-jsonschema --schemafile catalog/schemas/marketplace.schema.json catalog/marketplace.json

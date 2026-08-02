@@ -9,7 +9,8 @@
   "scripts": {
     "sync:readme": "node scripts/sync-readme-metadata.mjs",
     "check:readme": "node scripts/sync-readme-metadata.mjs --check",
+    "validate:versions": "node scripts/validate-version-bumps.mjs",
     "validate": "node scripts/validate.mjs",
-    "test": "npm run validate && npm run check:readme"
+    "test": "npm run validate && npm run check:readme && npm run validate:versions"
   }
 }
