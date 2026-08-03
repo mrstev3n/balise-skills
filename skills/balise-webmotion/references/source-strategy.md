@@ -19,7 +19,7 @@ Use the cheapest route that returns inspectable material:
 4. **Manual assisted navigation:** tell the user exactly what to open or select only when interaction or authentication requires them.
 5. **Reconstruction:** capture and rebuild the rendered interaction when code or assets cannot be acquired.
 
-Do not install a connector, start a paid plan, or bypass authentication just to avoid a viable fallback. Use task-relevant credentials already configured. If budget is unknown, start with accessible free material and mention a paid alternative only when it is materially better.
+Do not install a connector, start a paid plan, or bypass authentication without matching authorization merely to avoid a viable fallback. Use task-relevant credentials already configured. If budget is unknown, start with accessible free material and mention a paid alternative only when it is materially better.
 
 ## Sources by function
 
@@ -67,7 +67,9 @@ Copy a complete component when useful, extract only the material logic when that
 | [Rive Community](https://rive.app/community/) | Interactive files and state-machine patterns |
 | [Videezy](https://www.videezy.com/) | Footage, loops, textures, overlays, and backgrounds |
 | MotionSites backgrounds | Copyable animated background URLs and downloadable material when offered |
-| Available image/video generators | Transparent objects, textures, environments, sequences, and custom backgrounds |
+| Magnific, formerly Freepik | Live image-model catalog, raster/SVG generation, stock, upscale, variations, relight, resize, camera changes, background removal, and other currently exposed operations |
+| Higgsfield | Remote MCP for multi-model image generation and editing when connected; inspect the live tool list before assuming a website feature is exposed |
+| Available native or specialist generators | Transparent objects, textures, environments, sequences, and custom backgrounds |
 
 Verify usage terms at integration or redistribution time. Do not create a provenance or licensing dossier unless the user explicitly requests one.
 
@@ -105,6 +107,7 @@ Use official Motion, GSAP, Three.js/R3F, Rive, Lottie, MDN, CSSWG, browser-engin
 - Preview the actual file in context before collecting many alternatives.
 - Prefer editable formats when the direction requires color, timing, or state changes.
 - Generate a custom asset when a marketplace result weakens the composition.
+- For still-image generation, provider routing, dependency installation, or transparent cutouts, follow [asset-acquisition.md](asset-acquisition.md).
 
 ## Selection recipes
 

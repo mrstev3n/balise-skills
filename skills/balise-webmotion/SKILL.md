@@ -11,6 +11,7 @@ Set an award-level motion direction, then carry it into a working prototype. Res
 
 - [references/research-method.md](references/research-method.md) — image/video/live capture, temporal decomposition, compact research, and stop conditions. Load for reference research or reproduction.
 - [references/source-strategy.md](references/source-strategy.md) — source roles, platforms, and Browser/Computer Use/MCP/CLI collection routes. Load before external research or asset acquisition.
+- [references/asset-acquisition.md](references/asset-acquisition.md) — portable image generation, provider routing, dependency setup, chroma key, transparency, and web delivery. Load before creating, acquiring, installing tooling for, or cutting out still-image assets.
 - [references/autonomous-production.md](references/autonomous-production.md) — capability inventory, tool choice, asset acquisition, and prototype loop. Load for autonomous or hybrid production.
 - [references/quality-rubric.md](references/quality-rubric.md) — measurable Awwwards-level quality gate. Load before acceptance criteria, self-review, or final review.
 - [references/micro-interactions.md](references/micro-interactions.md) — compact micro-interaction catalog.
@@ -56,6 +57,7 @@ A faithful reprise is acceptable when requested. Otherwise improve the result th
 - Use Browser or Computer Use for visual search, filters, previews, copy buttons, downloads, and sites that expose no suitable API.
 - Copy useful prompts, snippets, code, assets, or URLs; adapt them immediately rather than building a source archive.
 - Reconstruct the observable mechanism when the original material cannot be acquired.
+- When a custom still image is needed, load [references/asset-acquisition.md](references/asset-acquisition.md), inspect live capabilities, and install the reversible local cutout runtime when authorized and useful.
 
 ### 4. Build
 
@@ -93,12 +95,12 @@ Choose behavior first, then route it through capabilities actually available in 
 | Vector sequence or loop | Lottie | LottieFiles, Lottie runtime |
 | Components, prompts, snippets | Component platforms | 21st.dev, MotionSites, Magic UI, BuouUI, Kinetics |
 | Animated backgrounds or footage | Asset platforms | MotionSites, Videezy, generated media |
-| Custom imagery, textures, environments | Image/video generation | Available media generation capability or project assets |
+| Custom imagery, textures, environments | Live image capability inventory | Native generation, Magnific, Higgsfield, another available image capability, or local fabrication |
 | Reconstruct a visible effect | Browser capture and local implementation | Temporal decomposition from screenshots or recordings |
 | Sound feedback | Opt-in web audio | Native Web Audio API with a silent fallback |
 | Performance and accessibility | Measurement and fallbacks | Browser profiling, reduced motion, keyboard and touch checks |
 
-If a preferred capability is absent, use an existing CLI, official runtime or documentation, browser inspection, or direct local implementation. Never claim to have used a tool that was not exposed.
+If a preferred capability is absent, use an existing CLI, official runtime or documentation, browser inspection, or direct local implementation. Offer an official connector or the packaged local image pipeline only when it materially improves the work and the required authorization is available. Never claim to have used a tool that was not exposed.
 
 ## Craft invariants
 

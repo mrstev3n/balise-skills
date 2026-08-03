@@ -43,6 +43,7 @@ Suggested routing:
 
 ## Asset acquisition
 
+- Load [asset-acquisition.md](asset-acquisition.md) for still-image generation, provider choice, dependency setup, transparent cutouts, or raster delivery.
 - Select the asset role first: subject, texture, environment, loop, overlay, icon sequence, state machine, sound, or shader.
 - Search the relevant sources using MCP, CLI, Browser, or Computer Use according to [source-strategy.md](source-strategy.md).
 - Use accessible free material when budget and credentials are unknown.
@@ -51,6 +52,7 @@ Suggested routing:
 - Generate transparent objects, backgrounds, environments, textures, or motion substrates when stock material is weak.
 - Place acquired/generated files in the project’s existing asset structure. Do not create a provenance log.
 - Check usage terms only before integrating or redistributing an external asset whose conditions matter.
+- If the local cutout backend is missing and a user-level install is authorized by the production request, run the packaged setup. Ask before system installation, administrator privileges, connector configuration, account authentication, or paid generation.
 
 ## Prototype loop
 
@@ -94,6 +96,7 @@ Verify proportionally to the work:
 If a preferred route fails:
 
 - MCP unavailable → use existing CLI or Browser/Computer Use;
+- no local image backend → run the packaged capability check, install an isolated Pillow runtime when authorized, or request system approval for ImageMagick;
 - authentication or free limit reached → use another source or reconstruct;
 - component incompatible → copy the useful mechanism into local code;
 - asset unavailable → generate or substitute a faithful proxy;
