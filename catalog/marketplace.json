@@ -477,8 +477,8 @@
     },
     {
       "id": "balise-webmotion",
-      "version": "0.1.0",
-      "updatedAt": "2026-08-02",
+      "version": "0.2.0",
+      "updatedAt": "2026-08-03",
       "path": "skills/balise-webmotion",
       "summary": "Research, direction, asset selection, implementation, and verification workflows for high-end interactive web motion and prototypes.",
       "category": "design",
@@ -495,17 +495,17 @@
         "format": "agent-skills",
         "adapters": ["codex-openai"],
         "installTested": [
-          { "harness": "claude-code", "method": "skills@1.5.9 copy", "date": "2026-08-02" },
-          { "harness": "codex", "method": "skills@1.5.9 copy", "date": "2026-08-02" },
-          { "harness": "cursor", "method": "skills@1.5.9 copy", "date": "2026-08-02" }
+          { "harness": "claude-code", "method": "skills@1.5.9 copy", "date": "2026-08-03" },
+          { "harness": "codex", "method": "skills@1.5.9 copy", "date": "2026-08-03" },
+          { "harness": "cursor", "method": "skills@1.5.9 copy", "date": "2026-08-03" }
         ],
         "runtimeTested": []
       }
     },
     {
       "id": "balise-motion-graphic",
-      "version": "0.1.0",
-      "updatedAt": "2026-08-02",
+      "version": "0.2.0",
+      "updatedAt": "2026-08-03",
       "path": "skills/balise-motion-graphic",
       "summary": "Direction, asset strategy, prototyping, rendering, and export validation workflows for contemporary motion graphics and video sequences.",
       "category": "design",
@@ -522,9 +522,9 @@
         "format": "agent-skills",
         "adapters": ["codex-openai"],
         "installTested": [
-          { "harness": "claude-code", "method": "skills@1.5.9 copy", "date": "2026-08-02" },
-          { "harness": "codex", "method": "skills@1.5.9 copy", "date": "2026-08-02" },
-          { "harness": "cursor", "method": "skills@1.5.9 copy", "date": "2026-08-02" }
+          { "harness": "claude-code", "method": "skills@1.5.9 copy", "date": "2026-08-03" },
+          { "harness": "codex", "method": "skills@1.5.9 copy", "date": "2026-08-03" },
+          { "harness": "cursor", "method": "skills@1.5.9 copy", "date": "2026-08-03" }
         ],
         "runtimeTested": []
       }

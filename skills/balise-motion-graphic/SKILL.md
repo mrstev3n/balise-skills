@@ -35,6 +35,7 @@ For inspiration, copying, reconstruction, and remix are legitimate inputs. A fai
 - Read [intake-and-formats.md](references/intake-and-formats.md) for a new or vague brief, channel, duration, ratio, frame-rate, or variant decision.
 - Read [reference-research.md](references/reference-research.md) before external research, moodboarding, or reference capture.
 - Read [asset-strategy.md](references/asset-strategy.md) when official assets are incomplete or stock, generation, SVG, Lottie, 3D, shaders, or Three.js may improve the direction.
+- Read [asset-acquisition.md](references/asset-acquisition.md) before generating, acquiring, upscaling, installing tooling for, or cutting out still-image assets in any harness.
 - Read [kinetic-typography.md](references/kinetic-typography.md) for title sequences, animated copy, captions, or typography-led work.
 - Read [motion-quality-and-lessons.md](references/motion-quality-and-lessons.md) before approving a direction, defining Motion DNA, animating a critical transition, or reviewing motion.
 - Read [sound-and-delivery.md](references/sound-and-delivery.md) when sound, voice, captions, loops, or a rendered deliverable exists.
@@ -74,6 +75,7 @@ python3 scripts/extract_reference_frames.py reference.mp4 frames/ --frames 16
 - Identify scenes missing subject, matter, depth, scale, or continuity.
 - Reuse, fabricate, source, generate, or render the smallest representative asset set that proves the direction.
 - In autonomous or hybrid production, create or acquire one representative sample and place it in a hero frame without waiting for the user to name a tool.
+- Inspect native generation, Magnific, Higgsfield, other exposed providers, and the packaged local pipeline. Install a reversible user-level cutout runtime when the production request authorizes it; ask before system changes, connector configuration, authentication, or spend.
 - Never regenerate or reinterpret an official logo with an image model.
 
 ### 4. Define Motion DNA and temporal plan

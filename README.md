@@ -222,7 +222,7 @@ npx skills add mrstev3n/balise-skills --skill balise-design-system
 
 [![Agent Skills](assets/badges/agent-skills.svg)](skills/balise-webmotion)
 
-<sub>Version 0.1.0 · Mise à jour le 2 août 2026</sub>
+<sub>Version 0.2.0 · Mise à jour le 3 août 2026</sub>
 
 Un workflow de recherche, de direction et de production pour créer des mouvements web ambitieux : transitions de page, narration au scroll, micro-interactions, gestes, effets 3D, animations vectorielles et prototypes rapides. Le skill choisit une approche adaptée au projet, construit le moment signature, puis vérifie les performances, les interactions et la réduction des mouvements.
 
@@ -234,7 +234,7 @@ npx skills add mrstev3n/balise-skills --skill balise-webmotion
 
 [![Agent Skills](assets/badges/agent-skills.svg)](skills/balise-motion-graphic)
 
-<sub>Version 0.1.0 · Mise à jour le 2 août 2026</sub>
+<sub>Version 0.2.0 · Mise à jour le 3 août 2026</sub>
 
 Un workflow de direction et de production pour les contenus animés rendus : teasers, vidéos sociales, génériques, kinetic typography, explainers, boucles et animations de marque. Il couvre le brief, les références, les assets, le rythme, le son, le choix du moteur, le rendu et la validation du fichier exporté.
 

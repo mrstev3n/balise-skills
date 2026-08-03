@@ -2,6 +2,8 @@
 
 Use this reference to decide whether to reuse, fabricate, source, generate, or render the visual matter of a motion-graphics sequence.
 
+Load [asset-acquisition.md](asset-acquisition.md) for the portable still-image workflow, live Magnific/Higgsfield routing, local dependency setup, chroma key, transparency, overscan, and compositing checks.
+
 ## Priority order
 
 1. Audit the complete official identity and product assets.
@@ -28,13 +30,13 @@ Never regenerate, “improve,” complete, or reinterpret an official logo with 
 ## Proactive decision process
 
 1. Mark which scenes lack subject, matter, depth, scale, or continuity.
-2. Inspect the harness for relevant image, video, SVG, 3D, shader, stock, and sound capabilities.
+2. Inspect the harness for relevant native image, Magnific, Higgsfield, video, SVG, 3D, shader, stock, and sound capabilities.
 3. In guided mode, present one to three routes with benefit, effort, risk, and minimum validation. In autonomous or hybrid mode, choose the strongest reversible route and make one sample.
 4. In authorized production, create or acquire one sample only.
 5. Place it in a representative hero frame.
 6. Validate the sample before series production.
 
-Do not ask the user to know the tool name. Do not claim a capability exists until it is exposed in the current harness. If the tool or network is unavailable, prepare a precise generation or sourcing brief and label the result unverified.
+Do not ask the user to know the tool name. Do not claim a capability exists until it is exposed in the current harness. If a local still-image backend is missing, use the packaged setup when installation is authorized. If tools, installation, and network are unavailable, prepare a precise generation or sourcing brief and label the result unverified.
 
 ## Generation brief
 
@@ -48,7 +50,7 @@ Specify:
 - relationship with existing identity assets;
 - negative constraints: no invented text, altered logos, unwanted background, pseudo-tech filler, stock gradient, or unrelated decoration.
 
-Prefer integrated image generation when available. A request for transparency does not prove that a generator will deliver clean native alpha. Generate against a removable background when necessary, then inspect premultiplication, halos, semi-transparent edges, shadows, and the final composite.
+Prefer the best live route rather than a permanent provider ranking. A request for transparency does not prove that a generator will deliver clean native alpha. Prefer a verified provider cutout, then use the packaged chroma workflow for simple opaque subjects. Route complex hair, fur, glass, smoke, liquids, reflections, translucency, and soft shadows to specialist matting.
 
 ## Acceptance checks
 
