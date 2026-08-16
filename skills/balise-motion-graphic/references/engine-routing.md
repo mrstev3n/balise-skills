@@ -36,6 +36,6 @@ When the engine choice is consequential and unclear, build the same small scene 
 
 ## Boundary with Webmotion
 
-Route to an interactive web-motion workflow when the primary outcome depends on user input, scroll, navigation, hover, gestures, runtime interruption, interactive performance, or interactive accessibility. Three.js belongs here only for deterministic rendered footage; an interactive scene belongs in the web experience. Lottie belongs here as a produced or consumed sequence; state-driven UI belongs in the interactive implementation.
+Route to `balise-webmotion` when available and the primary outcome depends on user input, scroll, navigation, hover, gestures, runtime interruption, interactive performance, or interactive accessibility. Otherwise use an equivalent interactive web-motion workflow. Three.js belongs here only for deterministic rendered footage; an interactive scene belongs in the web experience. Lottie belongs here as a produced or consumed sequence; state-driven UI belongs in the interactive implementation.
 
 The research doctrine differs only at delivery: neither skill needs provenance records for inspiration. Motion Graphic records usage terms for external assets and audio actually integrated into a redistributed render; Webmotion applies the same check only when an external asset is integrated or redistributed.

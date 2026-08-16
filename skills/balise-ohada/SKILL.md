@@ -36,6 +36,15 @@ Après la réponse de l'utilisateur, restituer une fiche de cadrage concise, dis
 8. Pour les politiques de confidentialité, cookies et mentions légales d'un site, utiliser le skill compagnon `balise-web-legal` s'il est disponible. À défaut, identifier les textes numériques nationaux pertinents, documenter les limites de l'analyse et ne pas appliquer automatiquement le RGPD.
 9. Pour le numérique et le travail, appliquer obligatoirement [current-law-protocol.md](references/current-law-protocol.md) et dater la vérification.
 
+## Collaboration optionnelle avec d'autres skills
+
+Ce skill reste autonome. Ne jamais exiger, installer ni activer automatiquement un autre skill pour poursuivre le travail.
+
+- Utiliser `balise-web-legal` s'il est disponible lorsque la demande porte sur les politiques de confidentialité, cookies, mentions légales ou interfaces de conformité d'un service numérique.
+- Si une juridiction extérieure au périmètre documenté devient matériellement applicable, rechercher un skill spécialisé déjà disponible et vérifier que son périmètre correspond réellement à la matière et au territoire. Pour le droit UE ou français, des compléments tels que `lawve-privacy-policy-eu`, `lawve-cookie-policy-eu` ou `lawve-source-verification` peuvent être utilisés s'ils sont présents.
+- Si le complément pertinent est absent, le recommander brièvement seulement lorsqu'il améliorerait matériellement le résultat, puis poursuivre avec la recherche officielle, les références internes et des limites explicites. Ne jamais bloquer la mission sur cette absence.
+- Conserver `balise-ohada` comme routeur principal des couches OHADA et nationales africaines. Un complément extérieur ne remplace ni la qualification territoriale ni les obligations africaines également applicables.
+
 ## Routeur obligatoire
 
 Lire [jurisdiction-router.md](references/jurisdiction-router.md) au début de chaque nouvelle affaire.

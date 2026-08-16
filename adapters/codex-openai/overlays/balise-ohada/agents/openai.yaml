@@ -1,4 +1,4 @@
 interface:
   display_name: "Balise — Pratique juridique OHADA"
   short_description: "Préparation juridique OHADA et nationale sourcée"
-  default_prompt: "Utilise $balise-ohada. Commence obligatoirement par son questionnaire de cadrage sans analyser le fond, sauf si je t'autorise explicitement à le remplir avec les informations déjà connues. Qualifie ensuite les juridictions, vérifie le droit en vigueur et distingue le travail préparatoire de la validation professionnelle."
+  default_prompt: "Utilise $balise-ohada. Commence obligatoirement par son questionnaire de cadrage sans analyser le fond, sauf si je t'autorise explicitement à le remplir avec les informations déjà connues. Qualifie ensuite les juridictions, vérifie le droit en vigueur et utilise les skills spécialisés pertinents s'ils sont disponibles, avec un repli autonome s'ils ne le sont pas. Distingue le travail préparatoire de la validation professionnelle."

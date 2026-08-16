@@ -220,10 +220,11 @@ When design, code, and documentation differ, identify the domain owner and inten
 
 ## Boundaries with adjacent skills
 
-- Use `complete-ui-states` to model missing states and recovery paths. Handoff Readiness records whether required state evidence exists.
-- Use `content-stress-test` for systematic content variability, overflow, localization, and truncation resilience.
-- Use `ux-writing` for comprehensive interface copy, voice, terminology, and content-system work.
-- Route autonomy, material disclosure, consent, reversibility, or deceptive-pattern risks to a dedicated trustworthy-flow review.
+- Use `balise-ui-states` if available to model missing states and recovery paths. Handoff Readiness records whether required state evidence exists.
+- Use `balise-content-test` if available for systematic content variability, overflow, localization, and truncation resilience.
+- Use `balise-ux-writing` if available for comprehensive interface copy, voice, terminology, and content-system work.
+- Use `balise-trustworthy-flows` if available for autonomy, material disclosure, consent, reversibility, or deceptive-pattern risks.
+- If a companion skill is unavailable, continue with the bounded checks documented here and identify any specialist review that remains open. Never block the handoff review on an optional companion.
 - Use accessibility, security, or legal specialists when the verdict depends on their domain. Do not claim certification from this skill.
 
 ## Completion standard

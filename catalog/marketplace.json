@@ -85,8 +85,8 @@
   "skills": [
     {
       "id": "balise-ohada",
-      "version": "0.3.0",
-      "updatedAt": "2026-08-02",
+      "version": "0.3.1",
+      "updatedAt": "2026-08-10",
       "path": "skills/balise-ohada",
       "summary": "Sourced preparatory research and drafting for OHADA and national law, with mandatory matter intake and professional-review boundaries.",
       "category": "legal",
@@ -130,8 +130,8 @@
     },
     {
       "id": "balise-web-legal",
-      "version": "0.3.0",
-      "updatedAt": "2026-08-02",
+      "version": "0.3.1",
+      "updatedAt": "2026-08-10",
       "path": "skills/balise-web-legal",
       "summary": "Preparatory website legal audits and drafting, with mandatory product intake, francophone African coverage, and GDPR routing when applicable.",
       "category": "legal",
@@ -418,8 +418,8 @@
     },
     {
       "id": "balise-handoff",
-      "version": "0.1.0",
-      "updatedAt": "2026-08-02",
+      "version": "0.1.1",
+      "updatedAt": "2026-08-10",
       "path": "skills/balise-handoff",
       "summary": "Evidence-based readiness audits and handoff preparation for designs, specifications, prototypes, design systems, and implemented interfaces.",
       "category": "design",
@@ -477,8 +477,8 @@
     },
     {
       "id": "balise-webmotion",
-      "version": "0.2.0",
-      "updatedAt": "2026-08-03",
+      "version": "0.2.1",
+      "updatedAt": "2026-08-10",
       "path": "skills/balise-webmotion",
       "summary": "Research, direction, asset selection, implementation, and verification workflows for high-end interactive web motion and prototypes.",
       "category": "design",
@@ -504,8 +504,8 @@
     },
     {
       "id": "balise-motion-graphic",
-      "version": "0.2.0",
-      "updatedAt": "2026-08-03",
+      "version": "0.2.1",
+      "updatedAt": "2026-08-10",
       "path": "skills/balise-motion-graphic",
       "summary": "Direction, asset strategy, prototyping, rendering, and export validation workflows for contemporary motion graphics and video sequences.",
       "category": "design",
