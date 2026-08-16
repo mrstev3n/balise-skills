@@ -70,7 +70,7 @@ Les badges indiquent les éditions réellement disponibles :
 
 [![Agent Skills](assets/badges/agent-skills.svg)](skills/balise-ohada)
 
-<sub>Version 0.3.0 · Mise à jour le 2 août 2026</sub>
+<sub>Version 0.3.1 · Mise à jour le 10 août 2026</sub>
 
 Un cadre de travail pour aider une IA à rechercher, analyser et rédiger en droit des affaires OHADA, sans confondre les Actes uniformes avec les règles nationales applicables.
 
@@ -86,7 +86,7 @@ npx skills add mrstev3n/balise-skills --skill balise-ohada
 
 [![Agent Skills](assets/badges/agent-skills.svg)](skills/balise-web-legal)
 
-<sub>Version 0.3.0 · Mise à jour le 2 août 2026</sub>
+<sub>Version 0.3.1 · Mise à jour le 10 août 2026</sub>
 
 Le RGPD est souvent le premier réflexe en matière de conformité numérique. Pourtant, un site destiné à un public francophone peut aussi relever de lois nationales sur les données personnelles, les cookies, les transactions électroniques ou la protection des consommateurs.
 
@@ -198,7 +198,7 @@ npx skills add mrstev3n/balise-skills --skill balise-trustworthy-flows
 
 [![Agent Skills](assets/badges/agent-skills.svg)](skills/balise-handoff) [![Figma Agent](assets/badges/figma-agent.svg)](figma-skills/balise-handoff/SKILL.md) [![Figma Make](assets/badges/figma-make.svg)](figma-skills/balise-handoff/SKILL.md)
 
-<sub>Version 0.1.0 · Mise à jour le 2 août 2026</sub>
+<sub>Version 0.1.1 · Mise à jour le 10 août 2026</sub>
 
 Un cadre pour déterminer si une conception est réellement prête à être implémentée. Il relie les maquettes, composants, prototypes, spécifications et preuves techniques, puis rend explicites les décisions ouvertes, leurs responsables, les risques et les critères d’acceptation.
 
@@ -222,7 +222,7 @@ npx skills add mrstev3n/balise-skills --skill balise-design-system
 
 [![Agent Skills](assets/badges/agent-skills.svg)](skills/balise-webmotion)
 
-<sub>Version 0.2.0 · Mise à jour le 3 août 2026</sub>
+<sub>Version 0.2.1 · Mise à jour le 10 août 2026</sub>
 
 Un workflow de recherche, de direction et de production pour créer des mouvements web ambitieux : transitions de page, narration au scroll, micro-interactions, gestes, effets 3D, animations vectorielles et prototypes rapides. Le skill choisit une approche adaptée au projet, construit le moment signature, puis vérifie les performances, les interactions et la réduction des mouvements.
 
@@ -234,7 +234,7 @@ npx skills add mrstev3n/balise-skills --skill balise-webmotion
 
 [![Agent Skills](assets/badges/agent-skills.svg)](skills/balise-motion-graphic)
 
-<sub>Version 0.2.0 · Mise à jour le 3 août 2026</sub>
+<sub>Version 0.2.1 · Mise à jour le 10 août 2026</sub>
 
 Un workflow de direction et de production pour les contenus animés rendus : teasers, vidéos sociales, génériques, kinetic typography, explainers, boucles et animations de marque. Il couvre le brief, les références, les assets, le rythme, le son, le choix du moteur, le rendu et la validation du fichier exporté.
 
