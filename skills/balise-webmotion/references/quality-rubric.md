@@ -35,4 +35,4 @@ Score each 0 (absent or counterproductive), 1 (correct), 2 (remarkable). An awar
 
 - **Direction mode:** each proposed direction declares which criteria it targets and which it deliberately sacrifices.
 - **Production mode:** the rubric is the self-review gate before delivery. List unmet criteria with their reason (constraint, choice, or open).
-- **Handoff:** the filled rubric travels with the built code to an independent reviewer, together with intent criteria, comparison references, and the declared motion budget. When independent review is unavailable, label the verdict as self-review rather than self-certifying it as independent.
+- **Handoff:** the filled rubric travels with the built code to `review-animations`, `improve-animations`, or another independent reviewer when available, together with intent criteria, comparison references, and the declared motion budget. When independent review is unavailable, label the verdict as self-review rather than self-certifying it as independent.

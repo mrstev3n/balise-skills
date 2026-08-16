@@ -33,4 +33,4 @@ Do not require author records, consultation dates, exact URLs, provenance logs, 
 | [Rebrand Bentos](https://www.rebrand.gallery/bentos), [BentoGrids](https://bentogrids.com/) | Frame hierarchy and modular composition |
 | [River](https://river.maxbittker.com/) | Lateral discovery of matter, form, era and culture |
 
-Use available browser or computer-control capabilities when motion, filters, previews, prompts, or downloads must be inspected visually. When they are unavailable, work from user-supplied files, recordings, screenshots, or links. Never describe a guided itinerary as a completed audit.
+Use `balise-visual-references` and available browser or computer-control capabilities when motion, filters, previews, prompts, or downloads must be inspected visually. If the skill or tools are unavailable, work from user-supplied files, recordings, screenshots, or links. Never describe a guided itinerary as a completed audit.

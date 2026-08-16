@@ -71,7 +71,7 @@ A faithful reprise is acceptable when requested. Otherwise improve the result th
 - Compare the prototype against the useful temporal and visual properties of the references.
 - Test interruption, repeat use, touch, keyboard, responsive behavior, reduced motion, and target-device performance where relevant.
 - Load the quality rubric, correct material gaps, generic timing, dead sections, and weak fallbacks.
-- Request an independent animation review when such a capability is available. Otherwise apply the bundled quality rubric, report that the review was self-performed, and keep independent review as an open follow-up.
+- Hand the built result to `review-animations` or `improve-animations` when available. Otherwise apply the bundled quality rubric, report that the review was self-performed, and keep independent review as an open follow-up.
 
 ## Research depth
 
@@ -98,7 +98,7 @@ Choose behavior first, then route it through capabilities actually available in 
 | Custom imagery, textures, environments | Live image capability inventory | Native generation, Magnific, Higgsfield, another available image capability, or local fabrication |
 | Reconstruct a visible effect | Browser capture and local implementation | Temporal decomposition from screenshots or recordings |
 | Sound feedback | Opt-in web audio | Native Web Audio API with a silent fallback |
-| Performance and accessibility | Measurement and fallbacks | Browser profiling, reduced motion, keyboard and touch checks |
+| Performance and accessibility | Measurement and fallbacks | `web-perf`, `web-accessibility`, browser profiling, reduced motion, keyboard and touch checks |
 
 If a preferred capability is absent, use an existing CLI, official runtime or documentation, browser inspection, or direct local implementation. Offer an official connector or the packaged local image pipeline only when it materially improves the work and the required authorization is available. Never claim to have used a tool that was not exposed.
 

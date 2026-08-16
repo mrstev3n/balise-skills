@@ -26,7 +26,7 @@ Inspect the project before asking. Ask at most three questions, only when facts,
 
 Use this skill for motion that becomes a rendered video or self-contained graphic sequence such as MP4, WebM, GIF, Lottie, image sequence, or deterministic composition.
 
-Route interactive behavior—hover, press, menus, scroll, navigation, gestures, runtime interruption, and UI frequency—to an interactive web-motion workflow. Three.js and shaders belong here only as deterministic rendered layers. Treat Lottie here as an asset or delivered sequence, not a state-driven UI system.
+Route interactive behavior—hover, press, menus, scroll, navigation, gestures, runtime interruption, and UI frequency—to `balise-webmotion` when available, otherwise to an equivalent interactive web-motion workflow. Three.js and shaders belong here only as deterministic rendered layers. Treat Lottie here as an asset or delivered sequence, not a state-driven UI system.
 
 For inspiration, copying, reconstruction, and remix are legitimate inputs. A faithful reprise is acceptable when requested. Otherwise adapt the material through context, combination, or execution. Do not create provenance records for inspiration-only references. Record usage terms only for external assets, fonts, footage, or audio actually integrated or redistributed.
 
@@ -44,7 +44,7 @@ For inspiration, copying, reconstruction, and remix are legitimate inputs. A fai
 - Start from [motion-brief-template.md](assets/motion-brief-template.md) only when a persistent brief helps.
 - Consult [worked-example.md](assets/worked-example.md) when an agent needs a compact example of a filled direction, Motion DNA, and beat sheet.
 
-Use specialized capabilities when available for live visual research, image generation, shot planning, motion craft, and HyperFrames or Remotion implementation. Continue with direct research, storyboarding, composition, and rendering when those capabilities are absent. Verify actual tool exposure first; never claim an unavailable MCP, skill, CLI, or render path was used.
+Use specialized capabilities when available: `balise-visual-references` for live research, image generation for visual assets, `create-video-storyboard` for shot planning, `motion-design` for craft, and exposed HyperFrames or Remotion skills for implementation. Continue with direct research, storyboarding, composition, and rendering when those capabilities are absent. Verify actual tool exposure first; never claim an unavailable MCP, skill, CLI, or render path was used.
 
 For local video references, run:
 

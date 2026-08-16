@@ -34,6 +34,15 @@ Après la réponse de l'utilisateur, restituer une fiche de cadrage concise, dis
 5. Séparer : fait observé, information fournie, exigence sourcée, interprétation, recommandation et élément non vérifié.
 6. Ne pas déclarer un site « conforme » sans preuve sur les traitements, contrats, mesures, formalités et comportement réel de l'interface.
 
+## Collaboration optionnelle avec d'autres skills
+
+Ce skill reste autonome. Ne jamais exiger, installer ni activer automatiquement un autre skill pour poursuivre le travail.
+
+- Utiliser `balise-ohada` s'il est disponible pour les questions nationales africaines, OHADA, d'identité juridique, de registre, de droit des sociétés ou d'activité réglementée qui dépassent les pages et interfaces du service.
+- Lorsque le routeur confirme l'application du droit UE ou français, utiliser `lawve-privacy-policy-eu`, `lawve-cookie-policy-eu` ou `lawve-source-verification` si le complément pertinent est déjà disponible et si son périmètre correspond à la question.
+- Si le complément pertinent est absent, le recommander brièvement seulement lorsqu'il améliorerait matériellement le résultat, puis poursuivre avec les références internes, les sources officielles et des limites explicites. Ne jamais bloquer la mission sur cette absence.
+- Ne jamais laisser un complément européen remplacer l'analyse séparée des obligations africaines également applicables.
+
 ## Références à lire
 
 - Lire [applicability-router.md](references/applicability-router.md) au début de chaque mission.
@@ -57,7 +66,7 @@ Inventorier pages, formulaires, comptes, paiements, messages, fichiers, journaux
 
 ### 3. Router
 
-Produire une matrice par juridiction et par matière : données personnelles, communications/traceurs, identité de l'éditeur, commerce électronique, consommation, secteur réglementé et paiements. Utiliser le skill compagnon `balise-ohada` s'il est disponible pour les questions nationales ou OHADA qui dépassent les pages du site. À défaut, isoler ces questions, effectuer la recherche officielle nécessaire et signaler les points qui exigent une validation locale. Si le droit UE ou français est applicable, traiter directement ce régime avec [jurisdictions-eu-france.md](references/jurisdictions-eu-france.md), sans remplacer les obligations africaines également applicables.
+Produire une matrice par juridiction et par matière : données personnelles, communications/traceurs, identité de l'éditeur, commerce électronique, consommation, secteur réglementé et paiements. Appliquer la collaboration optionnelle définie ci-dessus, puis traiter tout régime restant avec les références internes et les sources officielles. Si le droit UE ou français est applicable, lire [jurisdictions-eu-france.md](references/jurisdictions-eu-france.md), sans remplacer les obligations africaines également applicables.
 
 ### 4. Définir le jeu documentaire
 

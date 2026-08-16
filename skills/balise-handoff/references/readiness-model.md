@@ -87,7 +87,7 @@ Check:
 - analytics or audit events when contractually important;
 - backend and product decisions still needed.
 
-Delegate systematic state design to `complete-ui-states` when coverage is incomplete.
+Delegate systematic state design to `balise-ui-states` when available and coverage is incomplete. Otherwise record the missing state work explicitly.
 
 ### F. Content, semantics, accessibility, and localization
 
