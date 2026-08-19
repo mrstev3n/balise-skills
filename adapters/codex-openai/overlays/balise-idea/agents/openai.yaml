@@ -1,0 +1,4 @@
+interface:
+  display_name: "Balise IDEA"
+  short_description: "Discover opportunities and turn ideas into evidence-based next steps"
+  default_prompt: "Use $balise-idea to map the current opportunity or idea, preserve evidence and uncertainty, and define the next reversible learning action."
