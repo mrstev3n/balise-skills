@@ -98,6 +98,18 @@ Chaque nouveau dossier commence par un questionnaire obligatoire sur les entité
 npx skills add mrstev3n/balise-skills --skill balise-web-legal
 ```
 
+### `balise-idea`
+
+[![Agent Skills](assets/badges/agent-skills.svg)](skills/balise-idea) [![Figma Agent](assets/badges/figma-agent.svg)](figma-skills/balise-idea/SKILL.md) [![Figma Make](assets/badges/figma-make.svg)](figma-skills/balise-idea/SKILL.md)
+
+<sub>Version 0.1.0 · Mise à jour le 19 août 2026</sub>
+
+Un cadre pour explorer des opportunités, clarifier des idées et choisir des actions d’apprentissage vérifiables. Il distingue les observations, interprétations, hypothèses, résultats d’évidence et décisions, tout en préservant la provenance, l’incertitude et les limites d’autorisation.
+
+```bash
+npx skills add mrstev3n/balise-skills --skill balise-idea
+```
+
 ### `balise-ux-writing`
 
 [![Agent Skills](assets/badges/agent-skills.svg)](skills/balise-ux-writing) [![Figma Agent](assets/badges/figma-agent.svg)](figma-skills/balise-ux-writing/SKILL.md) [![Figma Make](assets/badges/figma-make.svg)](figma-skills/balise-ux-writing/SKILL.md)

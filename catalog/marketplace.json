@@ -5,8 +5,8 @@
     "id": "balise",
     "name": "Balise Skills",
     "description": "Un catalogue francophone et multidomaine de skills portables.",
-    "release": "0.7.0",
-    "updatedAt": "2026-08-02"
+    "release": "0.8.0",
+    "updatedAt": "2026-08-19"
   },
   "categories": [
     {
@@ -25,6 +25,12 @@
       "id": "design",
       "label": "Design",
       "description": "Design research, production, and review workflows.",
+      "status": "active"
+    },
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "description": "Opportunity discovery, ideation, experimentation, and decision workflows.",
       "status": "active"
     },
     {
@@ -63,6 +69,11 @@
     { "id": "interface-copy", "label": "Interface copy" },
     { "id": "interface-states", "label": "Interface states" },
     { "id": "interactive-design", "label": "Interactive design" },
+    { "id": "opportunity-discovery", "label": "Opportunity discovery" },
+    { "id": "ideation", "label": "Ideation" },
+    { "id": "experimentation", "label": "Experimentation" },
+    { "id": "decision-making", "label": "Decision-making" },
+    { "id": "evidence-based", "label": "Evidence-based" },
     { "id": "jurisdiction-aware", "label": "Jurisdiction-aware" },
     { "id": "legal-research", "label": "Legal research" },
     { "id": "localization", "label": "Localization" },
@@ -173,6 +184,38 @@
           }
         ],
         "runtimeTested": ["codex-cli@0.145.0 (2026-07-31)"]
+      }
+    },
+    {
+      "id": "balise-idea",
+      "version": "0.1.0",
+      "updatedAt": "2026-08-19",
+      "path": "skills/balise-idea",
+      "summary": "Evidence-based opportunity discovery, ideation, experimentation, and decision workflows with provenance, uncertainty, and authorization boundaries.",
+      "category": "strategy",
+      "tags": ["opportunity-discovery", "ideation", "experimentation", "decision-making", "evidence-based", "design-research"],
+      "license": "Apache-2.0",
+      "editions": [
+        {
+          "id": "agent-skills",
+          "path": "skills/balise-idea",
+          "targets": ["claude-code", "codex", "cursor"]
+        },
+        {
+          "id": "figma",
+          "path": "figma-skills/balise-idea/SKILL.md",
+          "targets": ["figma-agent", "figma-make"]
+        }
+      ],
+      "compatibility": {
+        "format": "agent-skills",
+        "adapters": ["codex-openai"],
+        "installTested": [
+          { "harness": "claude-code", "method": "isolated local copy parity", "date": "2026-08-19" },
+          { "harness": "codex", "method": "isolated local copy parity", "date": "2026-08-19" },
+          { "harness": "cursor", "method": "isolated local copy parity", "date": "2026-08-19" }
+        ],
+        "runtimeTested": []
       }
     },
     {
